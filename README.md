@@ -52,7 +52,7 @@ Le choix de KeePass pour ce projet repose sur plusieurs critères essentiels. D'
 ---
 ### Serveur Linux
 
-- **Point clé 1 (Hébergement BDD)** : Installation et configuration du serveur (ex: via Samba ou NFS) pour héberger le fichier de base de données **KeePass "DSI_T1"**.
+- **Point clé 1 (Hébergement BDD)** : Installation et configuration du serveur pour héberger le fichier de base de données **KeePass "DSI_T1"**.
     
 - **Point clé 2 (Stockage Clé)** : Définition d'un répertoire sécurisé (permissions strictes) sur ce serveur pour sauvegarder la **clé de chiffrement** (signature) spécifique à la BDD DSI_T1.
     
@@ -62,12 +62,12 @@ Le choix de KeePass pour ce projet repose sur plusieurs critères essentiels. D'
 
 - **Point clé 1 (Logiciel)** : Déploiement du logiciel **KeePass** (ou d'un client compatible) sur tous les postes clients nécessitant l'accès aux mots de passe.
     
-- **Point clé 2 (Accès BDD)** : Configuration des accès réseau (lecteurs mappés, raccourcis, etc.) permettant aux clients de se connecter indifféremment aux serveurs Windows (pour DSI_T0) ou Linux (pour DSI_T1).
+- **Point clé 2 (Accès BDD)** : Configuration des accès réseau permettant aux clients de se connecter indifféremment aux serveurs Windows (pour DSI_T0) ou Linux (pour DSI_T1).
     
 ---
 ### Infrastructure de Synchronisation (Tâche secondaire)
 
-- **Point clé 1 (Automatisation)** : Mise en place d'un **script ou d'un service** (ex: Rsync, Robocopy, ou un outil dédié) configuré via une tâche planifiée (CRON sur Linux, Planificateur de tâches sur Windows) pour synchroniser _automatiquement_ les fichiers BDD entre les deux serveurs.
+- **Point clé 1 (Automatisation)** : Mise en place d'un **d'un service** configuré via une tâche planifiée (CRON sur Linux, Planificateur de tâches sur Windows) pour synchroniser _automatiquement_ les fichiers BDD entre les deux serveurs.
     
 - **Point clé 2 (Vérification et Journalisation)** : Le script de synchronisation doit inclure une étape de **vérification** (ex: checksum) et générer un fichier de **log (journal)** daté pour tracer le succès ou l'échec de chaque opération.
 
