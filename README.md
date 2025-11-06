@@ -33,7 +33,7 @@ KeePass est un gestionnaire de mots de passe open source et gratuit qui permet d
 
   
 
-**Lien externe :** -https://keepass.info/help/base/firststeps.html
+**Lien externe :** https://keepass.info/help/base/firststeps.html
 
   
 
