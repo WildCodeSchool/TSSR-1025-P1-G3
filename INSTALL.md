@@ -110,10 +110,12 @@ La Double authentification créee une nouvelle fenêtre vous propose différente
 ### 4.4 Impression fiche d'urgence et Sauvegarde
 
  Une fois les options choisies et validées vous avez la possibilité d'imprimer une fiche d'urgence fournissant les informationss cruciales pour l'accès à votre base de données.
-![svvsheet.png](Ressources/svvsheet.png)
+
+ ![svvsheet.png](Ressources/svvsheet.png)
 
  Fermerz l'application en sauvegardant
-![savecreate.png](Ressources/savecreate.png)
+ 
+ ![savecreate.png](Ressources/savecreate.png)
 
 
 ### 4.5 Vérification
