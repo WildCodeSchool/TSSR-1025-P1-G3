@@ -42,6 +42,9 @@
 - *Entre cette commande :* 
 
 wilder@srvlx01:~$ sudo apt update && sudo apt upgrade -y
+
+![MAJ_paquets](Ressources/mise_a_jour_des_paquets.png)
+
 ###  **Installer  keepassxc et vérifier la version CLI**
 
 - *Entre cette commande :* 
