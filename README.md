@@ -56,14 +56,10 @@ Le choix de KeePass pour ce projet repose sur plusieurs critères essentiels. D'
   
 
 | Membre  | Rôle       | Missions                                                                                                                                                                                      |
-
 | ------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-
 | Eros    | PO         | Mise en place d'une base de données sécurisée (DSI_T1) avec un utilisateur dédié, intégrant une nouvelle signature de chiffrement dont la clé est sauvegardée sur un serveur Linux chiffré.   |
-
 | Nicolas | Technicien | Installer KeePass sur un client Windows et Linux et en comprendre le fonctionnement, mise en réseaux des VM.                                                                                  |
-
-| Georges | SM         | Mise en place d'une base de données sécurisée (DSI_T0) avec un utilisateur dédié, intégrant une nouvelle signature de chiffrement dont la clé est sauvegardée sur un serveur Windows chiffré. |
+| Georges | SM         | Mise en place d'une base de données sécurisée (DSI_T0) avec un utilisateur dédié, intégrant une nouvelle signature de chiffrement dont la clé est sauvegardée sur un serveur Windows chiffré. | transpose moi ça en tableau image
 
   
 
