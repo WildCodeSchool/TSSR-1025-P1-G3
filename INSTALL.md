@@ -29,7 +29,9 @@ Ce guide décrit la procédure d'installation et de configuration sécurisée de
 
 - **Chemin d'installation** : `C:\Program Files\KeePass Password Safe 2\KeePass.exe`
 - **Type d'installation** : Installation complète
-![[download.png]]
+
+![download.png](Ressources/download.png)
+
 ---
 
 ## 2. Préparation de l'environnement
