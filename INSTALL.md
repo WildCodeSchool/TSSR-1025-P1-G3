@@ -149,11 +149,20 @@ wilder@ubu01:~$ sshfs wilder@172.16.10.6:/var/keepass/files ~/keepass_srvlx01
 
 - *Entre cette commande :*
 
+wilder@ubu01:~$ ls -l ~/keepass_srvlx01
+
+Tu dois voir dsi_t1.kdbx et dsi_t1.key  
+![](Ressources/montage_server_srvlx01.png)
+
+## Lister les entrées
+
+- *Entre cette commande :*
+
 Affiche les entrées,il demandera le mot de passe principal **keepass_wilder**.
 
 wilder@ubu01:~$ keepassxc-cli ls -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srvlx01/dsi_t1.kdbx
 
-![](Ressources/liste_entrée_srvlx01.png)
+![](Ressources/liste_entrée_srvlx.png)
 
 ### Afficher une entrée wilder1
 
