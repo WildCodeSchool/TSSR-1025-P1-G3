@@ -119,5 +119,58 @@ La base de données est créée et sécurisée. On peut  maintenant créer des c
 # 3. Installation sur le client
 <span id="installation-sur-le-client"></span>
 
+### **Installation sur le client UBU01**
+
+Mets a jour  le système et installe **sshfs** pour monter le dossier distant via SSH, ainsi que **keepassxc**.
+
+- *Entre cette commande :*
+
+wilder@ubu01:~$ sudo apt update && sudo apt install -y sshfs keepassxc
+
+![](Ressources/installation_sshfs_MAJ_paquets.png)
+
+### Créer un point de montage
+
+Créer le dossier local où sera montée la base de données distante.
+
+- *Entre cette commande :*
+
+wilder@ubu01:~$ mkdir -p ~/keepass_srvlx01
+
+![](Ressources/création_dossier.png)
+
+### Monter le dossier distant (SSHFS)
+
+- *Entre cette commande :*
+
+wilder@ubu01:~$ sshfs wilder@172.16.10.6:/var/keepass/files ~/keepass_srvlx01
+
+## Lister la base de données et vérifier les droits 
+
+- *Entre cette commande :*
+
+wilder@ubu01:~$ ls -l ~/keepass_srvlx01
+
+Tu dois voir dsi_t1.kdbx et dsi_t1.key  
+![](Ressources/montage_server_srvlx01.png)
+
+## Lister les entrées
+
+- *Entre cette commande :*
+
+Affiche les entrées,il demandera le mot de passe principal **keepass_wilder**.
+
+wilder@ubu01:~$ keepassxc-cli ls -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srvlx01/dsi_t1.kdbx
+
+![](Ressources/liste_entrée_srvlx01.png)
+
+### Afficher une entrée wilder1
+
+- *Entre cette commande :*
+
+wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srvlx01/dsi_t1.kdbx wilder1 
+
+![](Ressources/lister_entrée_wilder1.png)
+
 # 4. FAQ
 <span id="faq"></span>
