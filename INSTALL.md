@@ -50,6 +50,9 @@ wilder@srvlx01:~$ sudo apt update && sudo apt upgrade -y
 - *Entre cette commande :* 
 
  wilder@srvlx01:~$ sudo apt install -y keepassxc && keepassxc-cli --version
+
+![](Ressources/Installer_keepassx_verification_versioncCLI.png)
+
 ### **Créer l’utilisateur système ici "keepass_wilder"**
 
 - *Entre cette commande :* 
@@ -72,6 +75,9 @@ wilder@srvlx01:~$ sudo apt update && sudo apt upgrade -y
   - Entre cette commande :
 
 wilder@srvlx01:~$ sudo chmod 700 /var/keepass/files
+
+![](Ressources/Créer_dossier_keepass.png)
+
 ##  **Génère la Clé de chiffrement  et créer la DB** 
 
 ###  **Génère la Clé**
@@ -91,6 +97,9 @@ wilder@srvlx01:~$ sudo chmod 600 /var/keepass/files/dsi_t1.key
 - *Entre cette commande :*
 
 wilder@srvlx01:~$ sudo chown keepass_wilder:keepass_wilder /var/keepass/files/dsi_t1.key
+
+![](Ressources/génère_clé-de_chiffrement.png)
+
 ### **créer la base KeePass et définit le mot de passe pour Keepass_wilder**
 
 - *Entre cette commande :*
@@ -104,6 +113,9 @@ wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-create /var/keepass/fi
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-info -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx
 
 La base de données est créée et sécurisée. On peut  maintenant créer des comptes et y stocker des informations. Plusieurs solutions s’offrent à nous : soit créer les utilisateurs manuellement, soit utiliser un script pour automatiser cette tâche.
+
+![](Ressources/Creation_DB.png)
+
 # 3. Installation sur le client
 <span id="installation-sur-le-client"></span>
 
