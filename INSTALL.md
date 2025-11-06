@@ -46,7 +46,7 @@ Créer un dossier `DSI_T0` à la racine du disque C: pour héberger :
 ```
 C:\DSI_T0\
 ```
-![[dir dsi.png]]
+![dirdsi.png](Ressources/dirdsi.png)
 ---
 
 ## 3. Création de la base de données
@@ -56,8 +56,8 @@ C:\DSI_T0\
 1. Lancer KeePass depuis le bureau
 2. Créer une nouvelle base : **File → New**
 3. Prendre connaissance des recommandations de sécurité et de sauvegarde
-![[new bdd.png]]
- ![[advert soft.png]]
+![newbdd.png](Ressources/newbdd.png)
+![advertsoft.png](Ressources/advertsoft.png)
  
  
  ### 3.2 Enregistrement
@@ -67,7 +67,7 @@ Enregistrer la base de données dans le dossier créé précédemment :
 ```
 C:\DSI_T1\DSI_T0.kdbx
 ```
-![[touch filebdd.png]]
+![touchfilebdd.png](Ressources/touchfilebdd.png)
 ---
 
 ## 4. Configuration de la sécurité
@@ -83,14 +83,46 @@ C:\DSI_T1\DSI_T0.kdbx
 1. Cocher l'option **"Key file/provider"** pour ajouter une couche de sécurité supplémentaire
 2. Générer le fichier de clé avec la méthode **"Random mouse input"**
 3. Le fichier `DSI_T0.keyx` est automatiquement créé dans `C:\DSI_T0\`
-![[security hey mdp.png]]
-### 4.3 Vérification
+![securityheymdp.png](Ressources/securityheymdp.png)
 
-Confirmer la présence des fichiers suivants dans `C:\DSI_T0\` :
+### 4.3 Options BDD
+
+La Double authentification créee une nouvelle fenêtre vous propose différentes options parmis lesquelles.
+
+1. Général 
+ Nom et Description : pour nommer votre bdd et la décrire
+ Historique : Gère le nombre de versions antérieures stockées
+
+2. Sécurité (Security)
+ Algorithmes : Choix de l'algorithme de chiffrement (ex. AES-256) 
+
+ Transformation de Clé : Définit le nombre d'itérations pour ralentir le processus d'ouverture.
+
+3. Compression (Compression)
+ Algorithme : Choisit une méthode de compression .
+
+4. Modèles (Templates)
+ Création Rapide : Permet de définir des modèles
+
+ Uniformité : Assure la cohérence des informations lors de la création de nouvelles entrées.
+ ![creatbdd.png](Ressources/creatbdd.png)
+
+### 4.4 Impression fiche d'urgence et Sauvegarde
+
+ Une fois les options choisies et validées vous avez la possibilité d'imprimer une fiche d'urgence fournissant les informationss cruciales pour l'accès à votre base de données.
+![svvsheet.png](Ressources/svvsheet.png)
+
+ Fermerz l'application en sauvegardant
+![savecreate.png](Ressources/savecreate.png)
+
+
+### 4.5 Vérification
+
+Vissualisez la présence des fichiers suivants dans `C:\DSI_T0\` :
 
 - `DSI_T0.kdbx` (base de données)
 - `DSI_T0.keyx` (fichier de clé)
-![[result bdd dir.png]]
+  ![resultbdddir.png](Ressources/resultbdddir.png)
 ---
 
 ## 5. Sécurisation avancée du fichier de clé
@@ -115,7 +147,7 @@ Protéger le fichier de clé contre :
 1. Ouvrir les **Propriétés** du dossier → Onglet **Sécurité**
 2. Cliquer sur **Avancé**
 3. **Désactiver l'héritage** et convertir les autorisations héritées en permissions explicites
-![[erithee.png]]
+![erithee.png](Ressources/erithee.png)
 #### Application des restrictions
 
 Configurer les permissions comme suit :
@@ -132,7 +164,7 @@ Configurer les permissions comme suit :
 2. Vérifier que seuls SYSTEM et Administrators apparaissent
 3. Confirmer les niveaux d'accès définis
 4. Sauvegarder le fichier DSI_T0.keyx dans ce dossier
-![[result perm.png]]
+![resultperm.png](Ressources/resultperm.png)
 ---
 
 ## 6. Résultat final
