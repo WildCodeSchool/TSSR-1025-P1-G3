@@ -3,7 +3,7 @@
 2. [Utilisation avancée](#utilisation-avancee)
 3. [FAQ](#faq)
 
-### # Guide d’utilisation
+# Guide d’utilisation
 
 Ce guide vous accompagnera de l'installation à la maîtrise de KeePass sur **Windows 11** et **Ubuntu**. Vous apprendrez à :
 
