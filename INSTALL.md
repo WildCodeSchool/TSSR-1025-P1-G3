@@ -69,9 +69,9 @@ wilder@srvlx01:~$ sudo apt update && sudo apt upgrade -y
   - Entre cette commande :
 
 wilder@srvlx01:~$ sudo chmod 700 /var/keepass/files
-##  **Génère la Clés de chiffrement  et créer la DB** 
+##  **Génère la Clé de chiffrement  et créer la DB** 
 
-###  **Génère la Clés**
+###  **Génère la Clé**
 
 - *Entre cette commande :*
 
