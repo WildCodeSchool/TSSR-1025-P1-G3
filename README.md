@@ -1,4 +1,4 @@
-![logo de la Wild Code SChool en exemple](Ressources/logo_WCS.jpg)
+![logo de la Wild Code SChool en exemple](Ressources/Logo_keepass.jpg)
 
 ## Sommaire 
 
