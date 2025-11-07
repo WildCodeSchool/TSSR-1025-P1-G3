@@ -12,9 +12,12 @@
 
 # 🎯 Présentation du projet
 <span id="presentation-du-projet"></span>
-**Déploiement de 2 bases de données (BDD) chiffrées
+
+**Déploiement de 2 bases de données (BDD) chiffrées**
+
 - Les BDD sont sur les serveurs
-- Elles sont accessibles depuis les clients**
+- Elles sont accessibles depuis les clients
+
 
 **Présentation**
 
