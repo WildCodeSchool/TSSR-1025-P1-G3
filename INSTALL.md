@@ -9,21 +9,21 @@
 <span id="prerequis-techniques"></span>
 **Étapes 1 :**
 
-  On va créer  quatre machines virtuelles :
+  crée  quatre machines virtuelles :
 
-  - Une VM  serveur Debian 12/13 CLI →  Nom : **SRVLX01**
+  - Une VM serveur Debian 12/13 CLI → Nom : **SRVLX01**
 
   - Une VM Windows server 2022/2025 GUI → Nom : **SRVWIN01**
 
-  - Une VM cliente Ubuntu 24 LTS →  Nom : **UBU01**
+  - Une VM cliente Ubuntu 24 LTS → Nom : **UBU01**
 
   - Une VM cliente Windows 10/11 → Nom : **WIN01**
 
 **Étapes 2 :**
 
-   - Mettre les quatre machines  en réseau → rajouter une 2e carte réseau en "réseau interne", avec le même nom "intnet".
+   - Mets les quatre machines  en réseau → rajoute une 2e carte réseau en "réseau interne", avec le même nom "intnet".
 
-   - Configurer l'adresse IP de la deuxième carte réseau sur les quatre machines
+   - Configure l'adresse IP de la deuxième carte réseau sur les quatre machines
 
    → VM Debian 12/13 CLI → **172.16.10.6**
 
@@ -32,6 +32,7 @@
    → VM client Ubuntu 24 LTS → **172.16.10.20**
 
    → VM client Windows 10/11 → **172.16.10.10**
+
 # 2. Installation sur les serveurs
 <span id="installation-sur-le-serveur"></span>
 
@@ -45,7 +46,7 @@ wilder@srvlx01:~$ sudo apt update && sudo apt upgrade -y
 
 ![MAJ_paquets](Ressources/mise_a_jour_des_paquets.png)
 
-###  **Installer  keepassxc et vérifier la version CLI**
+###  **Installe keepassxc et vérifier la version CLI**
 
 - *Entre cette commande :* 
 
@@ -53,12 +54,12 @@ wilder@srvlx01:~$ sudo apt update && sudo apt upgrade -y
 
 ![](Ressources/Installer_keepassx_verification_versioncCLI.png)
 
-### **Créer l’utilisateur système ici "keepass_wilder"**
+### **Crée l’utilisateur système ici "keepass_wilder"**
 
 - *Entre cette commande :* 
 
  wilder@srvlx01:~$ sudo useradd -r -s /usr/sbin/nologin keepass_wilder
-### **Créer  un dossier keepass dans /var**
+### **Crée  un dossier keepass dans /var**
 
 - *Entre cette commande :* 
 
@@ -106,7 +107,7 @@ wilder@srvlx01:~$ sudo chown keepass_wilder:keepass_wilder /var/keepass/files/ds
 
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-create /var/keepass/files/dsi_t1.kdbx --set-key-file /var/keepass/files/dsi_t1.key --set-password
 
- **vérifier  les infos de la DB** 
+ **vérifier les infos de la DB** 
 
 - *Entre cette commande :*
 
@@ -164,7 +165,7 @@ wilder@ubu01:~$ keepassxc-cli ls -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srvlx
 
 ![](Ressources/liste_entrée_srvlx.png)
 
-### Afficher une entrée wilder1
+### Afficher une entrée par exemple wilder1
 
 - *Entre cette commande :*
 
