@@ -12,7 +12,9 @@
 
 # 🎯 Présentation du projet
 <span id="presentation-du-projet"></span>
-**Sujet choisi**
+**Déploiement de 2 bases de données (BDD) chiffrées
+- Les BDD sont sur les serveurs
+- Elles sont accessibles depuis les clients**
 
 **Présentation**
 
@@ -26,12 +28,12 @@
 <span id="membres-du-groupe-par-sprint"></span>
 **Sprint 1**
 
-| Membre   | Rôle       | Missions |
-| -------- | ---------- | -------- |
-| membre 1 | PO         | -        |
-| membre 2 | SM         | -        |
-| membre 3 | Technicien | -        |
-| membre 4 | Technicien | -        |
+
+| Membre      | Rôle       | Missions                                                                       |
+| ----------- | ---------- | ------------------------------------------------------------------------------ |
+| EROS-NATHAN | PO         | -Installer KeePass, configurer la DB et la chiffrer sur le serveur Debian      |
+| GEOGES      | SM         | -Installer KeePass, configurer la DB et la chiffrer sous Windows Server        |
+| NICO        | Technicien | -Installer keePass sur les deux machines cliente et commencer la documentation |
 
 **Sprint 2**
 
