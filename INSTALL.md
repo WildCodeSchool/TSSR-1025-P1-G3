@@ -36,86 +36,120 @@
 # 2. Installation sur les serveurs
 <span id="installation-sur-le-serveur"></span>
 
-### **Installation sur le server Debian 12/13 CLI**
+## Installation sur le serveur Debian 12/13 (CLI)
 
-### Il faut mettre à jour le système avant l'installation de keepass.
+## 1. Mise à jour du système avant l’installation de KeePass :
 
-- *Entre cette commande :* 
+- *Entre cette commande :*
 
 wilder@srvlx01:~$ sudo apt update && sudo apt upgrade -y
 
 ![MAJ_paquets](Ressources/mise_a_jour_des_paquets.png)
 
-###  **Installe keepassxc et vérifier la version CLI**
+## 2. Installation de KeePassXC et vérification de la version
 
-- *Entre cette commande :* 
-
+- *Entre cette commande :*
  wilder@srvlx01:~$ sudo apt install -y keepassxc && keepassxc-cli --version
 
 ![](Ressources/Installer_keepassx_verification_versioncCLI.png)
 
-### **Crée l’utilisateur système ici "keepass_wilder"**
+## 3. Création de l'utilisateur système "keepass_wilder"
+
+- *Entre cette commande :*
+wilder@srvlx01:~$ sudo useradd -r -s /usr/sbin/nologin keepass_wilder
+
+## 4. Création du dossier keepass dans /var
+
+- *Entre cette commande :*
+wilder@srvlx01:~$ sudo mkdir -p /var/keepass/files
+
+## 5. Donne tous les droits a keepass_wilder pour être propriétaire
 
 - *Entre cette commande :* 
+wilder@srvlx01:~$ sudo chown keepass_wilder:keepass_wilder /var/keepass/files
 
- wilder@srvlx01:~$ sudo useradd -r -s /usr/sbin/nologin keepass_wilder
-### **Crée  un dossier keepass dans /var**
+## 6.Donne les droits de lecture, écriture et d'exécution a keepass_wilder
 
-- *Entre cette commande :* 
-
- wilder@srvlx01:~$ sudo mkdir -p /var/keepass/files
-
-**Donne tous les droits a keepass_wilder pour être propriétaire**
-
- - *Entre cette commande :* 
-
- wilder@srvlx01:~$ sudo chown keepass_wilder:keepass_wilder /var/keepass/files
-
-**Donne les droits de  lecture, écriture et d'exécution a keepass_wilder** 
-
-  - Entre cette commande :
-
+- *Entre cette commande :*
 wilder@srvlx01:~$ sudo chmod 700 /var/keepass/files
 
 ![](Ressources/Créer_dossier_keepass.png)
 
-##  **Génère la Clé de chiffrement  et créer la DB** 
-
-###  **Génère la Clé**
+## 7. Génération de la clé de chiffrement
 
 - *Entre cette commande :*
-
 wilder@srvlx01:~$ sudo -u keepass_wilder bash -c dd if=/dev/urandom of=/var/keepass/files/dsi_t1.key bs=64 count=1 status=none
 
-Donne les droits pour que seule keepass_wilder puisse lire la clé 
+## 8.Donne les droits pour que seule keepass_wilder puisse lire la clé 
 
 - *Entre cette commande :*
-
 wilder@srvlx01:~$ sudo chmod 600 /var/keepass/files/dsi_t1.key
 
-**Donne tous les droits a keepass_wilder pour être propriétaire**
+## 9.Donne tous les droits a keepass_wilder pour être propriétaire
 
 - *Entre cette commande :*
-
 wilder@srvlx01:~$ sudo chown keepass_wilder:keepass_wilder /var/keepass/files/dsi_t1.key
 
 ![](Ressources/génère_clé-de_chiffrement.png)
 
-### **créer la base KeePass et définit le mot de passe pour Keepass_wilder**
+## 10.créer la base KeePass et définit le mot de passe pour Keepass_wilder
 
 - *Entre cette commande :*
-
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-create /var/keepass/files/dsi_t1.kdbx --set-key-file /var/keepass/files/dsi_t1.key --set-password
 
- **vérifier les infos de la DB** 
+## 11. Vérification des informations de la base de données
 
 - *Entre cette commande :*
-
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-info -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx
 
 La base de données est créée et sécurisée. On peut  maintenant créer des comptes et y stocker des informations. Plusieurs solutions s’offrent à nous : soit créer les utilisateurs manuellement, soit utiliser un script pour automatiser cette tâche.
 
 ![](Ressources/Creation_DB.png)
+
+## 12. Création d'un utilisateur manuellement
+
+- *Entre cette commande :*
+wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli add -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx "wilder6" --username "nathan"
+
+![](Ressources/ajout-user_wild6.png)
+
+## 13. Pour ajouter des informations à l'utilisateur par exemple mail ou  téléphone
+
+- *Entre cette commande :*
+wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli edit -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx "wilder6" --notes "mail:nathan@proton.com\nTél: 06-47-13-48-19"
+
+![](Ressources/ajout_informations_user.png)
+
+## 14. Pour vérifier les entrées dans la base de données
+
+- *Entre cette commande :*
+wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli ls -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx
+
+![](Ressources/Lister_all_user.png)
+
+## 15. Pour afficher un utilsateur spécifique
+
+- *Entre cette commande :*
+wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli show -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx wilder6
+
+![](Ressources/lister_user_wilder6)
+
+## 16. Attribution des droits d'accès au client wilder 
+
+- *Entre cette commande :*
+wilder@srvlx01:~$ sudo chown -R keepass_wilder:wilder /var/keepass/files
+
+## 17.Donne des droits de lecture/écriture/exécution au groupe
+- *Entrez cette commande :*
+wilder@srvlx01:~$ sudo chmod -R 770 /var/keepass/files
+
+## 18. Pour vérifier les droits
+
+- *Entrez cette commande :*
+wilder@srvlx01:~$ sudo ls -l /var/keepass/files
+
+![](Ressources/verif_droit_distant.png)
+
 
 # 3. Installation sur le client
 <span id="installation-sur-le-client"></span>
@@ -124,7 +158,7 @@ La base de données est créée et sécurisée. On peut  maintenant créer des c
 
 Mets a jour  le système et installe **sshfs** pour monter le dossier distant via SSH, ainsi que **keepassxc**.
 
-- *Entre cette commande :*
+- *Entrez cette commande :*
 
 wilder@ubu01:~$ sudo apt update && sudo apt install -y sshfs keepassxc
 
@@ -134,7 +168,7 @@ wilder@ubu01:~$ sudo apt update && sudo apt install -y sshfs keepassxc
 
 Créer le dossier local où sera montée la base de données distante.
 
-- *Entre cette commande :*
+- *Entrez cette commande :*
 
 wilder@ubu01:~$ mkdir -p ~/keepass_srvlx01
 
@@ -142,13 +176,13 @@ wilder@ubu01:~$ mkdir -p ~/keepass_srvlx01
 
 ### Monter le dossier distant (SSHFS)
 
-- *Entre cette commande :*
+- *Entrez cette commande :*
 
 wilder@ubu01:~$ sshfs wilder@172.16.10.6:/var/keepass/files ~/keepass_srvlx01
 
 ## Lister la base de données et vérifier les droits 
 
-- *Entre cette commande :*
+- *Entrez cette commande :*
 
 wilder@ubu01:~$ ls -l ~/keepass_srvlx01
 
@@ -157,7 +191,7 @@ Tu dois voir dsi_t1.kdbx et dsi_t1.key
 
 ## Lister les entrées
 
-- *Entre cette commande :*
+- *Entrez cette commande :*
 
 Affiche les entrées,il demandera le mot de passe principal **keepass_wilder**.
 
@@ -167,7 +201,7 @@ wilder@ubu01:~$ keepassxc-cli ls -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srvlx
 
 ### Afficher une entrée par exemple wilder1
 
-- *Entre cette commande :*
+- *Entrez cette commande :*
 
 wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srvlx01/dsi_t1.kdbx wilder1 
 

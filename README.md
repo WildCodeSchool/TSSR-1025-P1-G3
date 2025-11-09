@@ -14,7 +14,6 @@
 <span id="presentation-du-projet"></span>
 
 **Déploiement de 2 bases de données (BDD) chiffrées**
-
 - Les BDD sont sur les serveurs
 - Elles sont accessibles depuis les clients
 
@@ -36,7 +35,7 @@
 | ----------- | ---------- | ------------------------------------------------------------------------------ |
 | EROS-NATHAN | PO         | -Installer KeePass, configurer la DB et la chiffrer sur le serveur Debian      |
 | GEOGES      | SM         | -Installer KeePass, configurer la DB et la chiffrer sous Windows Server        |
-| NICO        | Technicien | -Installer keePass sur les deux machines cliente et commencer la documentation |
+| NICOLAS       | Technicien | -Installer keePass sur les deux machines cliente et commencer la documentation |
 
 **Sprint 2**
 
