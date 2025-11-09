@@ -146,7 +146,7 @@ wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli ls -k /var/keepass/files/
 
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli show -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx wilder6
 
-![](Ressources/lister_user_wilder6)
+![](Ressources/lister_user_wilder6.png)
 
 ## 16. Attribution des droits d'accès au client wilder 
 
@@ -173,44 +173,45 @@ wilder@srvlx01:~$ sudo ls -l /var/keepass/files
 
 <span id="installation-sur-le-client"></span>
 
-### **Installation sur le client UBU01**
+# Configuration du client UBU01
 
-Mets a jour  le système et installe **sshfs** pour monter le dossier distant via SSH, ainsi que **keepassxc**.
+## 1. Mise à jour du système et installation de sshfs et keepassxc
 
-- *Entrez cette commande :*
+- *Entre cette commande :*
 
 wilder@ubu01:~$ sudo apt update && sudo apt install -y sshfs keepassxc
 
 ![](Ressources/installation_sshfs_MAJ_paquets.png)
 
-### Créer un point de montage
+## 2. Création d'un point de montage
 
 Créer le dossier local où sera montée la base de données distante.
 
-- *Entrez cette commande :*
+- *Entre cette commande :*
 
 wilder@ubu01:~$ mkdir -p ~/keepass_srvlx01
 
 ![](Ressources/création_dossier.png)
 
-### Monter le dossier distant (SSHFS)
+## 3. Montage du dossier distant SSHFS
 
-- *Entrez cette commande :*
+- *Entre cette commande :*
 
 wilder@ubu01:~$ sshfs wilder@172.16.10.6:/var/keepass/files ~/keepass_srvlx01
 
-## Lister la base de données et vérifier les droits 
+## 4. Vérification du montage et des droits
 
-- *Entrez cette commande :*
+- *Entre cette commande :*
 
 wilder@ubu01:~$ ls -l ~/keepass_srvlx01
 
-Tu dois voir dsi_t1.kdbx et dsi_t1.key  
+ dsi_t1.kdbx et dsi_t1.key 
+
 ![](Ressources/montage_server_srvlx01.png)
 
-## Lister les entrées
+## 5.Liste les entrées de la DB
 
-- *Entrez cette commande :*
+- *Entre cette commande :*
 
 Affiche les entrées,il demandera le mot de passe principal **keepass_wilder**.
 
@@ -218,9 +219,9 @@ wilder@ubu01:~$ keepassxc-cli ls -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srvlx
 
 ![](Ressources/liste_entrée_srvlx.png)
 
-### Afficher une entrée par exemple wilder1
+## 6.Liste une entrée specifique par exemple wilder1
 
-- *Entrez cette commande :*
+- *Entre cette commande :*
 
 wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srvlx01/dsi_t1.kdbx wilder1 
 
