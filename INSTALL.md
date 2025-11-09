@@ -49,6 +49,7 @@ wilder@srvlx01:~$ sudo apt update && sudo apt upgrade -y
 ## 2. Installation de KeePassXC et vérification de la version
 
 - *Entre cette commande :*
+
  wilder@srvlx01:~$ sudo apt install -y keepassxc && keepassxc-cli --version
 
 ![](Ressources/Installer_keepassx_verification_versioncCLI.png)
@@ -56,21 +57,25 @@ wilder@srvlx01:~$ sudo apt update && sudo apt upgrade -y
 ## 3. Création de l'utilisateur système "keepass_wilder"
 
 - *Entre cette commande :*
+
 wilder@srvlx01:~$ sudo useradd -r -s /usr/sbin/nologin keepass_wilder
 
 ## 4. Création du dossier keepass dans /var
 
 - *Entre cette commande :*
+
 wilder@srvlx01:~$ sudo mkdir -p /var/keepass/files
 
 ## 5. Donne tous les droits a keepass_wilder pour être propriétaire
 
 - *Entre cette commande :* 
+
 wilder@srvlx01:~$ sudo chown keepass_wilder:keepass_wilder /var/keepass/files
 
 ## 6.Donne les droits de lecture, écriture et d'exécution a keepass_wilder
 
 - *Entre cette commande :*
+
 wilder@srvlx01:~$ sudo chmod 700 /var/keepass/files
 
 ![](Ressources/Créer_dossier_keepass.png)
@@ -78,16 +83,19 @@ wilder@srvlx01:~$ sudo chmod 700 /var/keepass/files
 ## 7. Génération de la clé de chiffrement
 
 - *Entre cette commande :*
+
 wilder@srvlx01:~$ sudo -u keepass_wilder bash -c dd if=/dev/urandom of=/var/keepass/files/dsi_t1.key bs=64 count=1 status=none
 
 ## 8.Donne les droits pour que seule keepass_wilder puisse lire la clé 
 
 - *Entre cette commande :*
+
 wilder@srvlx01:~$ sudo chmod 600 /var/keepass/files/dsi_t1.key
 
 ## 9.Donne tous les droits a keepass_wilder pour être propriétaire
 
 - *Entre cette commande :*
+
 wilder@srvlx01:~$ sudo chown keepass_wilder:keepass_wilder /var/keepass/files/dsi_t1.key
 
 ![](Ressources/génère_clé-de_chiffrement.png)
@@ -95,11 +103,13 @@ wilder@srvlx01:~$ sudo chown keepass_wilder:keepass_wilder /var/keepass/files/ds
 ## 10.créer la base KeePass et définit le mot de passe pour Keepass_wilder
 
 - *Entre cette commande :*
+
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-create /var/keepass/files/dsi_t1.kdbx --set-key-file /var/keepass/files/dsi_t1.key --set-password
 
 ## 11. Vérification des informations de la base de données
 
 - *Entre cette commande :*
+
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-info -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx
 
 La base de données est créée et sécurisée. On peut  maintenant créer des comptes et y stocker des informations. Plusieurs solutions s’offrent à nous : soit créer les utilisateurs manuellement, soit utiliser un script pour automatiser cette tâche.
@@ -109,6 +119,7 @@ La base de données est créée et sécurisée. On peut  maintenant créer des c
 ## 12. Création d'un utilisateur manuellement
 
 - *Entre cette commande :*
+
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli add -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx "wilder6" --username "nathan"
 
 ![](Ressources/ajout-user_wild6.png)
@@ -116,6 +127,7 @@ wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli add -k /var/keepass/files
 ## 13. Pour ajouter des informations à l'utilisateur par exemple mail ou  téléphone
 
 - *Entre cette commande :*
+
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli edit -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx "wilder6" --notes "mail:nathan@proton.com\nTél: 06-47-13-48-19"
 
 ![](Ressources/ajout_informations_user.png)
@@ -123,6 +135,7 @@ wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli edit -k /var/keepass/file
 ## 14. Pour vérifier les entrées dans la base de données
 
 - *Entre cette commande :*
+
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli ls -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx
 
 ![](Ressources/Lister_all_user.png)
@@ -130,6 +143,7 @@ wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli ls -k /var/keepass/files/
 ## 15. Pour afficher un utilsateur spécifique
 
 - *Entre cette commande :*
+
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli show -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx wilder6
 
 ![](Ressources/lister_user_wilder6)
@@ -137,21 +151,26 @@ wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli show -k /var/keepass/file
 ## 16. Attribution des droits d'accès au client wilder 
 
 - *Entre cette commande :*
+
 wilder@srvlx01:~$ sudo chown -R keepass_wilder:wilder /var/keepass/files
 
 ## 17.Donne des droits de lecture/écriture/exécution au groupe
+
 - *Entrez cette commande :*
+
 wilder@srvlx01:~$ sudo chmod -R 770 /var/keepass/files
 
 ## 18. Pour vérifier les droits
 
 - *Entrez cette commande :*
+
 wilder@srvlx01:~$ sudo ls -l /var/keepass/files
 
 ![](Ressources/verif_droit_distant.png)
 
 
 # 3. Installation sur le client
+
 <span id="installation-sur-le-client"></span>
 
 ### **Installation sur le client UBU01**
