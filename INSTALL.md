@@ -231,7 +231,7 @@ wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srv
 
 # Configuration du client WIN01
 
-****Télécharge WinSCP depuis le lien ci-dessous et installe-le avec les paramètres par défaut** 
+**Télécharge WinSCP depuis le lien ci-dessous et installe-le avec les paramètres par défaut** 
 
 https://winscp.net/eng/download.php
 
@@ -243,7 +243,7 @@ https://winscp.net/eng/download.php
 
 ![](Ressources/detail_DB.png)
 
-#### **Étape 2 : Entrée dans le dossier  KeePass_DB **
+#### **Étape 2 : Entrée dans le dossier  KeePass_DB**
 
 1. Une fois connecté, sur la  droite  :
     - Accède au dossier  keepass_db .
@@ -292,6 +292,7 @@ https://winscp.net/eng/download.php
 6. Clique sur **Déverrouiller** pour accéder à la base.
 
 ![](Ressources/keepass_infos.png)
+
 
 # 4. FAQ
 <span id="faq"></span>
