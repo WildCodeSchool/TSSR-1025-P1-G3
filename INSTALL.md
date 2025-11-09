@@ -169,7 +169,7 @@ wilder@srvlx01:~$ sudo ls -l /var/keepass/files
 ![](Ressources/verif_droit_distant.png)
 
 
-# 3. Installation sur le client
+# 3. Installation sur les clients
 
 <span id="installation-sur-le-client"></span>
 
@@ -226,6 +226,72 @@ wilder@ubu01:~$ keepassxc-cli ls -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srvlx
 wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srvlx01/dsi_t1.kdbx wilder1 
 
 ![](Ressources/lister_entrée_wilder1.png)
+
+
+
+# Configuration du client WIN01
+
+****Télécharge WinSCP depuis le lien ci-dessous et installe-le avec les paramètres par défaut** 
+
+https://winscp.net/eng/download.php
+
+#### **Étape 1 : Connexion au serveur SRVLX01 via winSCP**
+
+1. Lance winSCP depuis le menu Démarrer
+2. Dans la fenêtre session entre les données demander
+3. Clique sur **Connexion** pour te connecter au serveur
+
+![](Ressources/detail_DB.png)
+
+#### **Étape 2 : Entrée dans le dossier  KeePass_DB **
+
+1. Une fois connecté, sur la  droite  :
+    - Accède au dossier  keepass_db .
+
+![](Ressources/keepass_db_.png)
+
+2. Tu devrais voir les fichiers suivants :
+    - **dsi_t1.kdbx** : La base de données KeePass.
+    - **dsi_t1.key** : La clé de chiffrement associée.
+3. Sélectionne les deux fichier
+
+![](Ressources/detail_keepass_db.png)
+
+#### **Étape 3 : Copier et coller les  fichiers sur ton PC local**
+
+1. Fais glisser **dsi_t1.kdbx** et **dsi_t1.key**  vers le panneau de gauche ton PC local,   C:\Users\wilder\Desktop
+2. Vérifie que les fichiers sont bien présents dans le dossier de destination.
+
+![](Ressources/copie-coller.png)
+
+#### **Étape 4 : Ouverture de la base de données avec KeePassXC**
+
+1. Lance KeePassXC depuis ton pc  Windows.
+2. Dans l’interface de KeePassXC :
+    - Clique sur **Ouvrir une base de données**.
+
+![](Ressources/keepass_interface.png)
+    
+3. Dans la fenêtre d’ouverture :
+    - Sélectionne le fichier **dsi_t1.kdbx** que tu as coller.
+    - Clique sur **Ouvrir**.
+
+![](Ressources/ouverture_DB_keepass.png)
+
+4. Pour sélectionner le fichier clé :
+    - Clique sur **Parcourir** à côté de Sélectionner le fichier clé.
+    - Choisis le fichier **dsi_t1.key** que tu as téléchargé.
+
+![](Ressources/cle_chiffrement.png)
+
+5. Une fenêtre te demande de :
+    - Saisir le mot de passe de la base de données.
+
+![](Ressources/MDP_cle.png)
+
+6. Clique sur **Déverrouiller** pour accéder à la base.
+
+![](Ressources/keepass_infos.png)
 
 # 4. FAQ
 <span id="faq"></span>
