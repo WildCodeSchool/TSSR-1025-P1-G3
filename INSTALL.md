@@ -11,13 +11,12 @@
 
   crée  quatre machines virtuelles :
 
-  - Une VM serveur Debian 12/13 CLI → Nom : **SRVLX01**
-
-  - Une VM Windows server 2022/2025 GUI → Nom : **SRVWIN01**
-
-  - Une VM cliente Ubuntu 24 LTS → Nom : **UBU01**
-
-  - Une VM cliente Windows 10/11 → Nom : **WIN01**
+| Machine Virtuelle | Système d'Exploitation   | NOM      |
+| ----------------- | ------------------------ | -------- |
+| VM 1              | Debian 12/13             | SRVLX01  |
+| VM 2              | Windows Server 2022/2025 | SRVWIN01 |
+| VM 3              | Ubuntu 24 LTS            | UBU01    |
+| VM 4              | Windows 10/11            | WIN01    |
 
 **Étapes 2 :**
 
@@ -25,13 +24,12 @@
 
    - Configure l'adresse IP de la deuxième carte réseau sur les quatre machines
 
-   → VM Debian 12/13 CLI → **172.16.10.6**
-
-   → VM Windows serveur 2022/2025 GUI → **172.16.10.5**
-
-   → VM client Ubuntu 24 LTS → **172.16.10.20**
-
-   → VM client Windows 10/11 → **172.16.10.10**
+| VM       | Système d'Exploitation       | Carte_réseau_1 | Carte_réseau_2/Réseau_Interne   | IP           |
+| -------- | ---------------------------- | -------------- | ------------------------------- | ------------ |
+| SRVLX01  | Debian 12/13 CLI             | NAT            | intnet                          | 172.16.10.6  |
+| SRVWIN01 | Windows Server 2022/2025 GUI | NAT            | intnet                          | 172.16.10.5  |
+| UBU01    | Ubuntu 24 LTS                | NAT            | intnet                          | 172.16.10.20 |
+| WIN01    | Windows 10/11                | NAT            | intnet                          | 172.16.10.10 |
 
 # 2. Installation sur les serveurs
 <span id="installation-sur-le-serveur"></span>
