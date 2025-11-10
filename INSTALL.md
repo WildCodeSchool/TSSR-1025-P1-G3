@@ -223,6 +223,7 @@ https://keepassxc.org/download
     - Coche : **Change** 
     - Coche : **Read** 
 8. Clique sur Aplly et  OK 
+
 ![](Ressources/cocher_permission.png)
 
 
