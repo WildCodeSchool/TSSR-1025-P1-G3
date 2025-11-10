@@ -173,7 +173,8 @@ wilder@srvlx01:~$ sudo ls -l /var/keepass/files
 
 ## Étape 1 : Installation de KeePassXC sur WIN01
 
-1. Télécharge et installe Keepassxc sur votre windows server
+1. Télécharge et installe Keepassxc sur windows server
+https://keepassxc.org/download
 2. Lancez l'application Keepassxc
 
 ## Étap 2 : Création de la base de données
@@ -208,9 +209,11 @@ wilder@srvlx01:~$ sudo ls -l /var/keepass/files
 1. Dans l'explorateur de fichier , ouvre ton dossier keepass a partager
 2. Fait un clic droit sur le dossier puis  **Properties**  et  **Sharing**
 3. Entre le mot de passe administrateur
+
 ![](Ressources/connexion_mode_admin.png)
 
 4. Clique sur Advanced sharing et coche Share this folder 
+
 ![](Ressources/cocher_shared.png)
 
 5. Clique sur **Permissions**
