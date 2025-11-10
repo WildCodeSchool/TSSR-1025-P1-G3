@@ -169,6 +169,62 @@ wilder@srvlx01:~$ sudo ls -l /var/keepass/files
 ![](Ressources/verif_droit_distant.png)
 
 
+## Installation sur le serveur Windown SRVWIN01
+
+## Étape 1 : Installation de KeePassXC sur WIN01
+
+1. Télécharge et installe Keepassxc sur votre windows server
+2. Lancez l'application Keepassxc
+
+## Étap 2 : Création de la base de données
+
+1. Clique sur **Create Database** dans l'écran d'accueil
+![](Ressources/ouverture_keepass.png)
+
+2. Entre les informations de la DB et clique sur continue
+![](Ressources/info_db.png)
+
+3. Choisis le format **KDBX4**
+4. Régle le temps de décryptage si besoin et clique sur **continue** 
+![](Ressources/securite.png)
+
+## Étape 3 : Configuration des identifiants
+
+1. Entre un mot de passe principal fort 
+2. Confirme le mot de passe
+![](Ressources/ajout_mdp_cle.png)
+
+3. Clique sur **Add additional protection** pour renforcer la sécurité
+4. Dans la section Key File, clique sur **Generate**
+![](Ressources/genere_cle.png)
+
+5. Enregistre le fichier clé  dans ton dossier ou un emplacement securisé  
+6. Clique sur **Done**
+7. L'interface keepass s'ouvre et tu pourras rajouter des données 
+![](Ressources/interfac_keepass.png)
+
+## Étape 4 : Préparation du partage réseau
+
+1. Dans l'explorateur de fichier , ouvre ton dossier keepass a partager
+2. Fait un clic droit sur le dossier puis  **Properties**  et  **Sharing**
+3. Entre le mot de passe administrateur
+![](Ressources/connexion_mode_admin.png)
+
+4. Clique sur Advanced sharing et coche Share this folder 
+![](Ressources/cocher_shared.png)
+
+5. Clique sur **Permissions**
+6. Sélectionne  le groupe **Everyone**
+7. Accorde les permissions :
+    - Coche : **Full Control** 
+    - Coche : **Change** 
+    - Coche : **Read** 
+8. Clique sur Aplly et  OK 
+![](Ressources/cocher_permission.png)
+
+
+
+
 # 3. Installation sur les clients
 
 <span id="installation-sur-le-client"></span>
