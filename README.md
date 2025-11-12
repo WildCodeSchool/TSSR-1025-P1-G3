@@ -40,7 +40,7 @@ Le choix de KeePassXC s'est imposé pour sa gratuité, sa compatibilité cross-p
 
 > Pour plus d'informations: [Keepassxc](https://keepassxc.org/docs/KeePassXC_GettingStarted)
 
->Pour plus d'informations: [WINSCP](https://winscp.net/eng/docs/start)
+> Pour plus d'informations: [WINSCP](https://winscp.net/eng/docs/start)
 
 > Pour plus d'informations: [SSHFS_WIN](https://github.com/winfsp/sshfs-win)
 

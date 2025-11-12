@@ -289,9 +289,11 @@ wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srv
 
 # Configuration du client WIN01
 
-**Télécharge WinSCP depuis le lien ci-dessous et installe-le avec les paramètres par défaut** 
+**Télécharge WinSCP  et sshfs depuis les liens ci-dessous et installe-le avec les paramètres par défaut** 
 
-https://winscp.net/eng/download.php
+- WINSCP :  https://winscp.net/eng/download.php
+
+- SSHFS :  https://github.com/winfsp/sshfs-win/releases/tag/v3.5.20357
 
 #### **Étape 1 : Connexion au serveur SRVLX01 via winSCP**
 
