@@ -289,23 +289,29 @@ wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srv
 
 # Configuration du client WIN01
 
-**Télécharge WinSCP  et sshfs depuis les liens ci-dessous et installe-le avec les paramètres par défaut** 
+**Télécharge et installe les outils suivants  avec les paramètres par défaut** 
 
 - WINSCP :  https://winscp.net/eng/download.php
 
-- SSHFS :  https://github.com/winfsp/sshfs-win/releases/tag/v3.5.20357
+- KEEPASSXC : (https://keepassxc.org/download/#windows)
 
 #### **Étape 1 : Connexion au serveur SRVLX01 via winSCP**
 
 1. Lance winSCP depuis le menu Démarrer
 2. Dans la fenêtre session entre les données demander
+    - Nom d’hôte : 172.16.10.6
+    - Nom d’utilisateur : nom_utilisateur_linux(wilder)
+    - Mot de passe : Saisie le mot de passe associé à l’utilisateur.
+    - Protocole : Choisit SFTP port 22 par défaut
+  
 3. Clique sur **Connexion** pour te connecter au serveur
 
 ![](Ressources/detail_DB.png)
 
-#### **Étape 2 : Entrée dans le dossier  KeePass_DB**
+#### **Étape 2 : Entre  dans le dossier  KeePass_DB**
 
 1. Une fois connecté, sur la  droite  :
+
     - Accède au dossier  keepass_db .
 
 ![](Ressources/keepass_db_.png)
