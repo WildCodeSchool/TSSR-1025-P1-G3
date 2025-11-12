@@ -9,7 +9,7 @@
 <span id="prerequis-techniques"></span>
 **Étapes 1 :**
 
-  crée  quatre machines virtuelles :
+  -crée quatre machines virtuelles :
 
 | Machine Virtuelle | Système d'Exploitation   | NOM      |
 | ----------------- | ------------------------ | -------- |
