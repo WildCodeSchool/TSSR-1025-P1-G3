@@ -224,9 +224,6 @@ https://keepassxc.org/download
 
 ![](Ressources/cocher_permission.png)
 
-
-
-
 # 3. Installation sur les clients
 
 <span id="installation-sur-le-client"></span>
@@ -350,8 +347,7 @@ wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srv
 
 ![](Ressources/cle_chiffrement.png)
 
-5. Une fenêtre te demande de :
-    - Saisir le mot de passe de la base de données.
+5. Une fenêtre te demande de saisir le mot de passe de la base de données.
 
 ![](Ressources/MDP_cle.png)
 
@@ -359,6 +355,7 @@ wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srv
 
 ![](Ressources/keepass_infos.png)
 
+Après avoir ouvert la base de données avec Keepassxc, tu peux ajouter, créer ou modifier des entrées utilisateurs et mots de passe.
 
 # 4. FAQ
 <span id="faq"></span>
