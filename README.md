@@ -5,7 +5,7 @@
 
   
 
-- **Imaginez une DSI** (Direction des Systèmes d'Information) où les **mots de passe critiques** de l'infrastructure ceux qui ouvrent les portes des serveurs de production, des routeurs ou des bases de données sont stockés dans un simple fichier texte partagé ou, pire, dans un tableur non chiffré sur un lecteur réseau. Une simple erreur humaine, la compromission d'un poste, ou une faille de permission suffisent à exposer l'ensemble de l'entreprise à une paralysie opérationnelle ou à un vol de données massif. Ce scénario, malheureusement trop courant, représente le **risque numéro un** en matière de sécurité informatique.
+-Imagineriez vous mettre vos codes PIN de carte bleue écris sur un post-it collé sur le frigo de la cuisine, et vos doubles de clés de maison posés en évidence sur la table de vvotre salon. Un de vos enfants ou amis, prends le post-it et griffones sur le post-it et finis par jeter votre "mémo" si précieux. Un cousin éloigné ou une baby sitter de passage s'emparrer des vos doubles de clés sans avoir la permission. Ses deux situations reflètent parfaitement l'intéret de sécurisés des données ou objets, une simple erreur humaine ou faille de permission et vous vous exposez à une paralysie "changement de vos serrures" , et un vol de données massif "Pertes de vos codes pin de carte bleue". 
 
   
 

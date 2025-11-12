@@ -240,3 +240,37 @@ La configuration mise en place garantit :
 
 # 4. FAQ
 <span id="faq"></span>
+
+Cette FAQ aborde les problèmes potentiels et questions techniques courantes lors de la mise en place de KeePass sur différents systèmes. Elle se concentre sur les dépannages pour une installation réussie.
+
+## Sur Windows Server
+
+**Q1 : Que faire si l'installation échoue à cause de .NET Framework ?**  
+Vérifiez que .NET Framework 4.8 est installé via le Gestionnaire de serveur. Téléchargez-le depuis le site Microsoft si nécessaire et relancez l'installation.
+
+**Q2 : KeePass est-il compatible avec les rôles serveur comme Active Directory ?**  
+Oui, mais exécutez-le via une session Remote Desktop pour éviter les conflits avec les services serveur. Testez en mode compatibilité si des erreurs surgissent.
+
+## Sur Linux Debian
+
+**Q1 : Que faire en cas d'erreur liée à Mono lors du lancement ?**  
+Mettez à jour Mono avec `sudo apt update && sudo apt upgrade mono-complete`. Vérifiez les logs dans le terminal pour des détails spécifiques.
+
+**Q2 : Problèmes de permissions pour les bases de données KeePass ?**  
+Assurez-vous que l'utilisateur a les droits en lecture/écriture sur le dossier des fichiers .kdbx. Évitez de lancer en root pour des raisons de sécurité.
+
+## Sur Windows 11 (VM Client)
+
+**Q1 : Pourquoi KeePass est-il lent dans une VM Windows 11 ?**  
+Allouez plus de RAM et CPU à la VM via les paramètres de l'hyperviseur. Désactivez les effets graphiques inutiles dans Windows pour améliorer les performances.
+
+**Q2 : Erreurs de synchronisation avec des plugins comme KeeAnywhere ?**  
+Vérifiez la connexion réseau de la VM et mettez à jour les plugins. Testez sans plugins pour isoler le problème, souvent lié à des certificats SSL.
+
+## Sur Linux Ubuntu (VM Client)
+
+**Q1 : Que faire si KeePass ne s'ouvre pas après installation dans une VM Ubuntu ?**  
+Installez les dépendances manquantes comme `mono-complete` et `xdotool` via apt. Relancez et vérifiez les erreurs dans le terminal.
+
+**Q2 : Problèmes d'intégration avec le clipboard dans une VM ?**  
+Installez les outils invités de votre hyperviseur (ex. : VirtualBox Guest Additions) pour une meilleure gestion du presse-papiers partagé.
