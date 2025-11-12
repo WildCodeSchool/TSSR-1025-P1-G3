@@ -53,8 +53,8 @@ Le choix de KeePassXC s'est imposé pour sa gratuité, sa compatibilité cross-p
 
 | Membre      | Rôle       | Missions                                                                                                          |
 | ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------- |
-| EROS-NATHAN | PO         | Installer KeePass, configurer la base de données et la chiffrer sur le serveur Debian, commencer la documentation |
-| GEORGES      | SM         | Installer KeePass, configurer la base de données et la chiffrer sous Windows Server, commencer la documentation   |
+| EROS        | PO         | Installer KeePass, configurer la base de données et la chiffrer sur le serveur Debian, commencer la documentation |
+| GEORGES     | SM         | Installer KeePass, configurer la base de données et la chiffrer sous Windows Server, commencer la documentation   |
 | NICOLAS     | Technicien | Installer KeePass sur les deux machines clientes et commencer la documentation                                    |
 
 **Sprint 2**
@@ -62,8 +62,8 @@ Le choix de KeePassXC s'est imposé pour sa gratuité, sa compatibilité cross-p
 | Membre      | Rôle       | Missions                                                                                                                               |
 | ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | NICOLAS     | PO         | Accéder aux serveurs Windows et Debian et terminer la documentation                                                                    |
-| EROS-NATHAN | SM         | Créer des mots de passe et des utilisateurs sur le serveur Debian, les chiffrer et permettre l’accès des clients à la base de données  |
-| GEORGES      | Technicien | Créer des mots de passe et des utilisateurs sur le serveur Windows, les chiffrer et permettre l’accès des clients à la base de données |
+| EROS        | SM         | Créer des mots de passe et des utilisateurs sur le serveur Debian, les chiffrer et permettre l’accès des clients à la base de données  |
+| GEORGES     | Technicien | Créer des mots de passe et des utilisateurs sur le serveur Windows, les chiffrer et permettre l’accès des clients à la base de données |
 
 # ⚙️ Choix techniques
 <span id="choix-techniques"></span>
