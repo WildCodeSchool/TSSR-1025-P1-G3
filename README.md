@@ -7,7 +7,7 @@
     - [Pourquoi Kesspass?](#pourquoi-kesspass)
 - [👥 Membres du groupe par sprint](#-membres-du-groupe-par-sprint)
 - [⚙️ Choix techniques](#️-choix-techniques)
-- [🧗 Difficultés rencontrées](#-difficultés-rencontrées)
+- [🧗 Difficultés rencontrées et](#-difficultés-rencontrées-et)
 - [💡 Solutions trouvées](#-solutions-trouvées)
 - [🚀 Améliorations possibles](#-améliorations-possibles)
 
@@ -40,7 +40,7 @@ Le choix de KeePassXC s'est imposé pour sa gratuité, sa compatibilité cross-p
 
 > Pour plus d'informations: [Keepassxc](https://keepassxc.org/docs/KeePassXC_GettingStarted)
 
-> Pour plus d'informations: [WINSCP](https://winscp.net/eng/docs/start)
+>Pour plus d'informations: [WINSCP](https://winscp.net/eng/docs/start)
 
 > Pour plus d'informations: [SSHFS_WIN](https://github.com/winfsp/sshfs-win)
 
@@ -53,8 +53,8 @@ Le choix de KeePassXC s'est imposé pour sa gratuité, sa compatibilité cross-p
 
 | Membre      | Rôle       | Missions                                                                                                          |
 | ----------- | ---------- | ----------------------------------------------------------------------------------------------------------------- |
-| EROS        | PO         | Installer KeePass, configurer la base de données et la chiffrer sur le serveur Debian, commencer la documentation |
-| GEORGES     | SM         | Installer KeePass, configurer la base de données et la chiffrer sous Windows Server, commencer la documentation   |
+| EROS-NATHAN | PO         | Installer KeePass, configurer la base de données et la chiffrer sur le serveur Debian, commencer la documentation |
+| GEORGES      | SM         | Installer KeePass, configurer la base de données et la chiffrer sous Windows Server, commencer la documentation   |
 | NICOLAS     | Technicien | Installer KeePass sur les deux machines clientes et commencer la documentation                                    |
 
 **Sprint 2**
@@ -62,8 +62,8 @@ Le choix de KeePassXC s'est imposé pour sa gratuité, sa compatibilité cross-p
 | Membre      | Rôle       | Missions                                                                                                                               |
 | ----------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | NICOLAS     | PO         | Accéder aux serveurs Windows et Debian et terminer la documentation                                                                    |
-| EROS        | SM         | Créer des mots de passe et des utilisateurs sur le serveur Debian, les chiffrer et permettre l’accès des clients à la base de données  |
-| GEORGES     | Technicien | Créer des mots de passe et des utilisateurs sur le serveur Windows, les chiffrer et permettre l’accès des clients à la base de données |
+| EROS-NATHAN | SM         | Créer des mots de passe et des utilisateurs sur le serveur Debian, les chiffrer et permettre l’accès des clients à la base de données  |
+| GEORGES      | Technicien | Créer des mots de passe et des utilisateurs sur le serveur Windows, les chiffrer et permettre l’accès des clients à la base de données |
 
 # ⚙️ Choix techniques
 <span id="choix-techniques"></span>
@@ -89,17 +89,15 @@ clients :
 - **WinSCP** : client SFTP/SCP pour Windows, facilitant le transfert sécurisé de fichiers et l'accès aux serveurs Linux
 - **SSHFS** : système de fichiers permettant le montage distant des répertoires via SSH, offrant un accès transparent aux bases hébergées sur Linux
 
-# 🧗 Difficultés rencontrées 
+# 🧗 Difficultés rencontrées et 
 <span id="difficultes-rencontrees"></span>
 
-- Montage SSHFS sous Windows: Installation et configuration de SSHFS-Win qui nécessite WinFsp comme dépendance
 - Configuration des permissions SSH : Mise en place des droits d'accès appropriés sur le serveur Linux pour permettre l'accès aux fichiers .kdbx tout en maintenant la sécurité
 -  Configuration réseau: Ouverture des ports nécessaires (SSH port 22) et configuration des pare-feu
 
 # 💡 Solutions trouvées
 <span id="solutions-trouvees"></span>
 - Documentation d'une procédure de montage SSHFS standardisée pour faciliter l'installation sur les nouveaux postes clients
-
 
 # 🚀 Améliorations possibles
 <span id="ameliorations-possibles"></span>
