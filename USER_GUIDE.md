@@ -4,9 +4,6 @@
 2. [Utilisation avancée](#utilisation-avancee)
 3. [FAQ](#faq)
 
-# 1. Utilisation de base
-<span id="utilisation-de-base"></span>
-
 # 🔑 Guide Utilisateur de Base KeePass
 <span id="utilisation-de-base"></span>
 
@@ -53,11 +50,62 @@
 
 1. Quand vous n'utilisez plus la base de données :
     * Cliquez sur l'icône du **cadenas** : la base est verrouillée et nécessite votre Mot de Passe pour la rouvrir.
+
     * Ou **Quittez** complètement le logiciel.
 
-
-# 2. Utilisation avancée
+# 🛡️ Guide Utilisateur Avancé KeePass
 <span id="utilisation-avancee"></span>
+
+## 1. **Intégration au Navigateur**
+
+Possiblité d'intégrer KeePassXC à votre navigateur web pour un remplissage automatique des formulaires de connexion.
+
+
+1. **Installation des Composants**
+ 
+   - Dans KeePassXC, allez dans **Outils** → **Paramètres** → **Intégration du navigateur**.
+    
+   - **Cochez** "Activer l'intégration du navigateur KeePassXC" et activez le support     
+
+     pour votre navigateur (Chrome, Firefox, etc.).
+
+   - Téléchargez l'extension KeePassXC-Browser depuis votre navigateur et installez la.
+
+3. **Couplage de la Base de Données**
+
+   - Cliquez sur l'icône de l'extension KeePassXC dans votre navigateur.
+
+   - Entrez un nom de connexion.
+
+   - Une fenêtre pop-up de KeePassXC apparaît. Cliquez sur **Enregistrer et Accéder** 
+    
+     pour autoriser l'extension à communiquer avec votre base de données ouverte.
+
+## 2. **Stockers des fichiers**
+
+Peut également stocker des fichiers (documents, images, etc.) dans les entrées de votre base de 
+
+données.   
+ 
+   - Dans l'édition d'une entrée, allez dans l'onglet **Avancé**.   
+   
+   - Cliquez sur **Ajouter** sous la section Pièces jointes.
+
+1. **Vérification de la Robustesse des Mots de Passe**
+
+     Vous avez la possibilité d'auditer votre base de données pour identifier les mots de passe 
+     
+     faibles, réutilisés ou manquants.
+
+   - Allez dans Base de données → Rapport de la base de données.
+
+   - Le rapport vous montrera :
+
+        - Les mots de passe utilisés plusieurs fois.
+
+        - Les mots de passe faibles (selon une complexité configurable).
+
+        - Les entrées sans URL.
 
 # 3. FAQ
 <span id="faq"></span>
