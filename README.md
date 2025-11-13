@@ -15,7 +15,7 @@
 # 📜 Introduction
 
 <span id="introduction"></span>
-Vous faites partie de ces organisations où la sécurité des mots de passe est une priorité absolue ? Ce projet est conçu pour vous . L’objectif est de mettre en place une solution robuste et centralisée  pour stocker et gérer les mots de passe, en utilisant Keepass, un logiciel open source reconnu pour sa fiabilité et sa simplicité d’utilisation.
+Vous faites partie de ces organisations où la sécurité des mots de passe est une priorité absolue ? Ce projet est conçu pour vous. L’objectif est de mettre en place une solution robuste et centralisée  pour stocker et gérer les mots de passe, en utilisant Keepass, un logiciel open source reconnu pour sa fiabilité et sa simplicité d’utilisation.
 # 🎯 Présentation du projet
 <span id="presentation-du-projet"></span>
 Ce projet a pour objectif de sécuriser et centraliser la gestion des mots de passe au sein d’une infrastructure informatique, en utilisant le logiciel Keepass. L’enjeu est de permettre à plusieurs utilisateurs d’accéder de manière sécurisée à des bases de données chiffrées, hébergées sur des serveurs Windows et Linux, tout en garantissant la confidentialité et l’intégrité des données.
@@ -35,7 +35,7 @@ Le projet se concentre sur :
 - Garantir un stockage sécurisé et chiffré des mots de passe .
 - Permettre aux utilisateurs d'accéder aux bases de données depuis leurs postes clients
 - Assurer la disponibilité des données sur des infrastructures Windows et Linux
-### Pourquoi Kesspass?
+### Pourquoi Kesspass ?
 
 Le choix de KeePassXC s'est imposé pour sa gratuité, sa compatibilité cross-platform, et son niveau de sécurité élevé. L'utilisation combinée de WinSCP et SSHFS permet aux utilisateurs Windows d'accéder facilement aux bases stockées sur le serveur Linux sans manipulation complexe.
 
