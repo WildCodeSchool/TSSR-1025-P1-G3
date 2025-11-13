@@ -9,7 +9,7 @@
 <span id="prerequis-techniques"></span>
 **Étapes 1 :**
 
-  -crée quatre machines virtuelles :
+  - Crée quatre machines virtuelles :
 
 | Machine Virtuelle | Système d'Exploitation   | NOM      |
 | ----------------- | ------------------------ | -------- |
@@ -98,7 +98,7 @@ wilder@srvlx01:~$ sudo chown keepass_wilder:keepass_wilder /var/keepass/files/ds
 
 ![](Ressources/génère_clé-de_chiffrement.png)
 
-## 10.créer la base KeePass et définit le mot de passe pour Keepass_wilder
+## 10.Créer la base KeePass et définit le mot de passe pour Keepass_wilder
 
 - *Entre cette commande :*
 
@@ -111,7 +111,7 @@ wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-create /var/keepass/fi
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-info -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx
 
 ![](Ressources/Creation_DB.png)
-La base de données est crée et sécurisée. On peut  maintenant créer des comptes et y stocker des informations. Plusieurs solutions s’offrent à nous : soit créer les utilisateurs manuellement, soit utiliser un script pour automatiser cette tâche.
+La base de données est crée et sécurisée. On peut maintenant créer des comptes et y stocker des informations. Plusieurs solutions s’offrent à nous : soit créer les utilisateurs manuellement, soit utiliser un script pour automatiser cette tâche.
 
 
 ## 12. Création d'un utilisateur manuellement
@@ -122,7 +122,7 @@ wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli add -k /var/keepass/files
 
 ![](Ressources/ajout-user_wild6.png)
 
-## 13. Pour ajouter des informations à l'utilisateur par exemple mail ou  téléphone
+## 13. Pour ajouter des informations à l'utilisateur par exemple mail ou téléphone
 
 - *Entre cette commande :*
 
@@ -138,7 +138,7 @@ wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli ls -k /var/keepass/files/
 
 ![](Ressources/Lister_all_user.png)
 
-## 15. Pour afficher un utilsateur spécifique
+## 15. Pour afficher un utilisateur spécifique
 
 - *Entre cette commande :*
 
@@ -238,7 +238,7 @@ C:\DSI_T1\DSI_T0.kdbx
 
 ### 4.3 Options BDD
 
-La Double authentification créee une nouvelle fenêtre vous propose différentes options parmis lesquelles.
+La Double authentification crée une nouvelle fenêtre qui vous propose différentes options parmis lesquelles.
 
 1. Général 
  Nom et Description : pour nommer votre bdd et la décrire
@@ -250,7 +250,7 @@ La Double authentification créee une nouvelle fenêtre vous propose différente
  Transformation de Clé : Définit le nombre d'itérations pour ralentir le processus d'ouverture.
 
 3. Compression (Compression)
- Algorithme : Choisit une méthode de compression .
+ Algorithme : Choisit une méthode de compression.
 
 4. Modèles (Templates)
  Création Rapide : Permet de définir des modèles
@@ -260,7 +260,7 @@ La Double authentification créee une nouvelle fenêtre vous propose différente
 
 ### 4.4 Impression fiche d'urgence et Sauvegarde
 
- Une fois les options choisies et validées vous avez la possibilité d'imprimer une fiche d'urgence fournissant les informationss cruciales pour l'accès à votre base de données.
+ Une fois les options choisies et validées vous avez la possibilité d'imprimer une fiche d'urgence fournissant les informations cruciales pour l'accès à votre base de données.
 
  ![svvsheet.png](Ressources/svvsheet.png)
 
@@ -273,7 +273,7 @@ La Double authentification créee une nouvelle fenêtre vous propose différente
 
 ### 4.5 Vérification
 
-Vissualisez la présence des fichiers suivants dans `C:\DSI_T0\` :
+Visualisez la présence des fichiers suivants dans `C:\DSI_T0\` :
 
 - `DSI_T0.kdbx` (base de données)
 - `DSI_T0.keyx` (fichier de clé)
@@ -373,7 +373,7 @@ wilder@ubu01:~$ ls -l ~/keepass_srvlx01
 
 ![](Ressources/montage_server_srvlx01.png)
 
-## 5.Liste les entrées de la DB
+## 5. Liste les entrées de la DB
 
 Affiche les entrées,il demandera le mot de passe principal **keepass_wilder**.
 
@@ -383,7 +383,7 @@ wilder@ubu01:~$ keepassxc-cli ls -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srvlx
 
 ![](Ressources/liste_entrée_srvlx.png)
 
-## 6.Liste une entrée specifique par exemple wilder1
+## 6. Liste une entrée specifique par exemple wilder1
 
 - *Entre cette commande :*
 
@@ -404,7 +404,7 @@ wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srv
 #### **Étape 1 : Connexion au serveur SRVLX01 via winSCP**
 
 1. Lance winSCP depuis le menu Démarrer
-2. Dans la fenêtre session entre les données demander
+2. Dans la fenêtre session entre les données demandées
     - Nom d’hôte : 172.16.10.6
     - Nom d’utilisateur : nom_utilisateur_linux(wilder)
     - Mot de passe : Saisie le mot de passe associé à l’utilisateur.
@@ -414,18 +414,18 @@ wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srv
 
 ![](Ressources/detail_DB.png)
 
-#### **Étape 2 : Entre  dans le dossier  KeePass_DB**
+#### **Étape 2 : Entre dans le dossier KeePass_DB**
 
-1. Une fois connecté, sur la  droite  :
+1. Une fois connecté, sur la droite :
 
-    - Accède au dossier  keepass_db .
+    - Accède au dossier keepass_db .
 
 ![](Ressources/keepass_db_.png)
 
 2. Tu devrais voir les fichiers suivants :
     - **dsi_t1.kdbx** : La base de données KeePass.
     - **dsi_t1.key** : La clé de chiffrement associée.
-3. Sélectionne les deux fichier
+3. Sélectionne les deux fichiers
 
 ![](Ressources/detail_keepass_db.png)
 
@@ -438,14 +438,14 @@ wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srv
 
 #### **Étape 4 : Ouverture de la base de données avec KeePassXC**
 
-1. Lance KeePassXC depuis ton pc  Windows.
+1. Lance KeePassXC depuis de ton pc Windows.
 2. Dans l’interface de KeePassXC :
     - Clique sur **Ouvrir une base de données**.
 
 ![](Ressources/keepass_interface.png)
     
 3. Dans la fenêtre d’ouverture :
-    - Sélectionne le fichier **dsi_t1.kdbx** que tu as coller.
+    - Sélectionne le fichier **dsi_t1.kdbx** que tu as collé.
     - Clique sur **Ouvrir**.
 
 ![](Ressources/ouverture_DB_keepass.png)
