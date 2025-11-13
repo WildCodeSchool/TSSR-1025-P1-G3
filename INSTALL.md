@@ -82,7 +82,7 @@ wilder@srvlx01:~$ sudo chmod 700 /var/keepass/files
 
 - *Entre cette commande :*
 
-wilder@srvlx01:~$ sudo -u keepass_wilder bash -c dd if=/dev/urandom of=/var/keepass/files/dsi_t1.key bs=64 count=1 status=none
+wilder@srvlx01:~$ sudo -u keepass_wilder bash -c 'dd if=/dev/urandom of=/var/keepass/files/dsi_t1.key bs=64 count=1 status=none'
 
 ## 8.Donne les droits pour que seule keepass_wilder puisse lire la clé 
 
