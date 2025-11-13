@@ -58,7 +58,7 @@
 
 ## 1. **Intégration au Navigateur**
 
-Possiblité d'intégrer KeePassXC à votre navigateur web pour un remplissage automatique des formulaires de connexion.
+Possibilité d'intégrer KeePassXC à votre navigateur web pour un remplissage automatique des formulaires de connexion.
 
 
 1. **Installation des Composants**
@@ -81,7 +81,7 @@ Possiblité d'intégrer KeePassXC à votre navigateur web pour un remplissage au
     
      pour autoriser l'extension à communiquer avec votre base de données ouverte.
 
-## 2. **Stockers des fichiers**
+## 2. **Stocker des fichiers**
 
 Peut également stocker des fichiers (documents, images, etc.) dans les entrées de votre base de 
 
