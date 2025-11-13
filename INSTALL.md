@@ -104,13 +104,14 @@ wilder@srvlx01:~$ sudo chown keepass_wilder:keepass_wilder /var/keepass/files/ds
 
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-create /var/keepass/files/dsi_t1.kdbx --set-key-file /var/keepass/files/dsi_t1.key --set-password
 
+![](Ressources/Creation_DB.png)
+
 ## 11. Vérification des informations de la base de données
 
 - *Entre cette commande :*
 
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-info -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx
 
-![](Ressources/Creation_DB.png)
 La base de données est crée et sécurisée. On peut maintenant créer des comptes et y stocker des informations. Plusieurs solutions s’offrent à nous : soit créer les utilisateurs manuellement, soit utiliser un script pour automatiser cette tâche.
 
 
