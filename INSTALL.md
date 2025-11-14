@@ -228,7 +228,7 @@ https://keepassxc.org/download
 
 <span id="installation-sur-le-client"></span>
 
-# Configuration du client UBU01 et Acceder a la db SRVLX01
+# Configuration du client UBU01 pour acceder a la db SRVLX01
 
 ## 1. Mise à jour du système et installation de sshfs et keepassxc
 
@@ -283,7 +283,7 @@ wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srv
 ![](Ressources/lister_entrée_wilder1.png)
 
 
-# Configuration du client UBU01 et Acceder a la db SRVWIN01
+# Configuration du client UBU01 pour acceder a la db SRVWIN01
 
 ## 1. Installer KeePass en mode graphique (GUI)
 
@@ -294,6 +294,7 @@ wilder@ubu01:~$ sudo apt update && sudo apt install keepassxc cifs-utils -y
 ## 2. Crée le dossier local et verification 
 
 wilder@ubu01:~$ mkdir -p ~/keepass_srvwin01
+
 wilder@ubu01:~$ ls -l keepass_srvwin01/
 
 ![](Ressources/creation_dossier_verif.png)
@@ -310,9 +311,9 @@ wilder@ubu01:~$ ls -l keepass_srvwin01/
 
 ![](Ressources/verif_montage.png)
 
-# 5. Lance KeePass
+## 5. Lance KeePass
 
- wilder@ubu01:~$ keepassxc
+wilder@ubu01:~$ keepassxc
 
 ## 6. Ouvre la base de données
 
@@ -323,32 +324,32 @@ Cliquer sur **Ouvrir une base de données existante**
 ## 7. Sélectionne le fichier de base de données
 
 - Choisir le fichier : **dsi_to**
-- 
+
 ![](Ressources/selectionne_db.png)
 
 ## 8. Parcourir et sélectionne le fichier de clé
 
 - Cliquer sur **Parcourir**
-- 
+
 ![](Ressources/parcourir.png)
 
 - Sélectionner le fichier de clé (key file)
-- 
+
 ![](Ressources/key.png)
 
 ## 9. Déverrouiller la base de données
 
 - Entrer le mot de passe de la base de données
-- 
+
 ![](Ressources/mot_de_passe.png)
 
 - Cliquer sur **Déverrouiller**
-  
+
 Puis l'interface s'ouvre
 
 ![](Ressources/interface.png)
 
-# Configuration du client WIN01 et acceder a la Db SRVLX01
+# Configuration du client WIN01 pour acceder a la Db SRVLX01
 
 **Télécharge et installe les outils suivants  avec les paramètres par défaut** 
 
@@ -421,6 +422,49 @@ Puis l'interface s'ouvre
 
 Après avoir ouvert la base de données avec Keepassxc, tu peux ajouter, créer ou modifier des entrées utilisateurs et mots de passe.
 
+# Configuration du client WIN01 pour acceder a la Db SRVWIN01
+
+## 1. Télécharge et installe KeePassXC
+
+   - https://keepassxc.org/download
+
+## 2. Monter le partage réseau
+
+   - Ouvrir l'Explorateur Windows
+   - Taper dans la barre d'adresse : \\172.16.10.5\Keepass_db_srwin01
+
+![](Ressources/srvwin_win.png)
+
+   - Entre les identifiants : utilisateur **wilder** et son mot de passe
+   - 
+ ![](Ressources/info-db-srwwin-win.png) 
+
+## 3. Lance KeePassXC
+
+## 4. Ouvre la base de données
+   - Clique sur **Ouvrir une base de données existante**
+   - 
+  ![](Ressources/keepass_interface.png)
+
+   - Choisir le fichier : dsi_to
+  
+![](Ressources/db_srv_win_win.png)
+
+## 5. Ajoute la  clé
+   - Cliquer sur **Parcourir** dans la section fichier clé
+   - 
+![](Ressources/key_win_win.png)
+
+## 6. Déverrouille
+   - Entrer le mot de passe de la base de données
+   - Cliquer sur **Déverrouiller**
+   - 
+![](Ressources/ineterface_db_win.png)
+
+
+
+
+
 # 4. FAQ
 <span id="faq"></span>
 Cette FAQ aborde les problèmes potentiels et questions techniques courantes lors de la mise en place de KeePass sur différents systèmes. Elle se concentre sur les dépannages pour une installation réussie.
@@ -436,7 +480,7 @@ Oui, mais exécutez-le via une session Remote Desktop pour éviter les conflits 
 ## Sur Linux Debian
 
 **Q1 : Que faire en cas d'erreur liée à Mono lors du lancement ?**  
-Mettez à jour Mono avec `sudo apt update && sudo apt upgrade mono-complete`. Vérifiez les logs dans le terminal pour des détails spécifiques.
+Mettez à jour Mono avec sudo apt update && sudo apt upgrade mono-complete . Vérifiez les logs dans le terminal pour des détails spécifiques.
 
 **Q2 : Problèmes de permissions pour les bases de données KeePass ?**  
 Assurez-vous que l'utilisateur a les droits en lecture/écriture sur le dossier des fichiers .kdbx. Évitez de lancer en root pour des raisons de sécurité.
@@ -452,7 +496,7 @@ Vérifiez la connexion réseau de la VM et mettez à jour les plugins. Testez sa
 ## Sur Linux Ubuntu (VM Client)
 
 **Q1 : Que faire si KeePass ne s'ouvre pas après installation dans une VM Ubuntu ?**  
-Installez les dépendances manquantes comme `mono-complete` et `xdotool` via apt. Relancez et vérifiez les erreurs dans le terminal.
+Installez les dépendances manquantes comme mono-complete et xdotool via apt. Relancez et vérifiez les erreurs dans le terminal.
 
 **Q2 : Problèmes d'intégration avec le clipboard dans une VM ?**  
 Installez les outils invités de votre hyperviseur (ex. : VirtualBox Guest Additions) pour une meilleure gestion du presse-papiers partagé.
