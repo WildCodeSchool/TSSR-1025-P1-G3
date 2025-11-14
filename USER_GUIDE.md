@@ -107,6 +107,9 @@ données.
 
         - Les entrées sans URL.
 
+
+---
+
 # Guide d'utilisation de KeePassXC sous Windows 11
 
 ## Prérequis
@@ -246,6 +249,9 @@ Une fois l'authentification réussie, vous accédez à l'interface principale de
 _Figure 6 : Interface principale avec la base de données DSI_T0 déverrouillée_
 
 
+---
+
+
 # Guide d'utilisation de KeePassXC sous Ubuntu
 
 ## Prérequis
@@ -366,38 +372,6 @@ Une fois authentifié avec succès, vous accédez à l'interface principale de K
 
 
 _Figure 6 : Interface principale avec la base de données déverrouillée_
-
-**Éléments de l'interface :**
-
-**Panneau gauche - Arborescence des groupes :**
-
-- 📁 DSI_T0 (dossier racine)
-    - General
-    - Windows
-    - Network
-    - Internet
-    - eMail
-    - Homebanking
-    - Recycle Bin (corbeille)
-
-**Section "Recherches et Étiquettes" :**
-
-- 🔍 Effacer la recherche
-- 📋 Toutes les entrées
-- ⏰ Expirés
-- 🔑 Mots de passe faibles
-
-**Panneau central - Liste des entrées :**
-
-- Affiche les entrées du groupe sélectionné
-- Colonnes : Titre, Nom d'utilisateur, URL, Notes, Modifiée
-- Exemple visible : entrée "Sample..." avec "User Name"
-
-**Panneau inférieur - Détails de l'entrée :**
-
-- Onglets : Général, Avancé, Saisie automatique
-- Informations détaillées : Nom d'utilisateur, Mot de passe (masqué), URL, Expiration, Étiquettes, Notes
-
 
 
 
