@@ -240,7 +240,7 @@ wilder@ubu01:~$ sudo apt update && sudo apt install -y sshfs keepassxc
 
 ## 2. Création d'un point de montage
 
-Créer le dossier local où sera montée la base de données distante.
+Crée le dossier local où sera montée la base de données distante.
 
 - *Entre cette commande :*
 
@@ -285,7 +285,7 @@ wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srv
 
 # Configuration du client UBU01 pour acceder a la db SRVWIN01
 
-## 1. Installer KeePass en mode graphique (GUI)
+## 1. Installe KeePass en mode graphique (GUI)
 
 wilder@ubu01:~$ sudo apt update && sudo apt install keepassxc cifs-utils -y
 
@@ -317,19 +317,19 @@ wilder@ubu01:~$ keepassxc
 
 ## 6. Ouvre la base de données
 
-Cliquer sur **Ouvrir une base de données existante**
+Clique sur **Ouvrir une base de données existante**
 
 ![](Ressources/ouverture_keepass_srvwin_sur_ubu.png)
 
 ## 7. Sélectionne le fichier de base de données
 
-- Choisir le fichier : **dsi_to**
+- Choisie le fichier : **dsi_to**
 
 ![](Ressources/selectionne_db.png)
 
 ## 8. Parcourir et sélectionne le fichier de clé
 
-- Cliquer sur **Parcourir**
+- Clique sur **Parcourir**
 
 ![](Ressources/parcourir.png)
 
@@ -337,13 +337,13 @@ Cliquer sur **Ouvrir une base de données existante**
 
 ![](Ressources/key.png)
 
-## 9. Déverrouiller la base de données
+## 9. Déverrouille la base de données
 
-- Entrer le mot de passe de la base de données
+- Entre le mot de passe de la base de données
 
 ![](Ressources/mot_de_passe.png)
 
-- Cliquer sur **Déverrouiller**
+- Clique sur **Déverrouiller**
 
 Puis l'interface s'ouvre
 
@@ -430,8 +430,8 @@ Après avoir ouvert la base de données avec Keepassxc, tu peux ajouter, créer 
 
 ## 2. Monter le partage réseau
 
-   - Ouvrir l'Explorateur Windows
-   - Taper dans la barre d'adresse : \\172.16.10.5\Keepass_db_srwin01
+   - Ouvre l'Explorateur Windows
+   - Tape dans la barre d'adresse : \\172.16.10.5\Keepass_db_srwin01
 
 ![](Ressources/srvwin_win.png)
 
@@ -446,17 +446,17 @@ Après avoir ouvert la base de données avec Keepassxc, tu peux ajouter, créer 
  
   ![](Ressources/keepass_interface.png)
 
-   - Choisir le fichier : dsi_to
+   - Choisie le fichier : dsi_to
 
 ![](Ressources/db_srv_win_win.png)
 
 ## 5. Ajoute la  clé
-   - Cliquer sur **Parcourir** dans la section fichier clé 
+   - Clique sur **Parcourir** dans la section fichie clé 
 ![](Ressources/key_win_win.png)
 
 ## 6. Déverrouille la Db
-   - Entrer le mot de passe de la base de données
-   - Cliquer sur **Déverrouiller**
+   - Entre le mot de passe de la base de données
+   - Clique sur **Déverrouiller**
 
 ![](Ressources/ineterface_db_win.png)
 
