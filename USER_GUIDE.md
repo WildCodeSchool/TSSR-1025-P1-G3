@@ -107,6 +107,276 @@ données.
 
         - Les entrées sans URL.
 
+
+---
+
+# Guide d'utilisation de KeePassXC sous Windows 11
+
+## Prérequis
+
+Ce guide suppose que KeePassXC est déjà installé et configuré sur votre système Windows 11.
+
+---
+
+## Ouverture de votre base de données
+
+### Étape 1 : Lancer l'application
+
+Démarrez KeePassXC depuis la barre des tâches Windows 11 ou via le menu Démarrer.
+
+![W1](Ressources/W1.png)
+
+
+
+
+_Figure 1 : Icône KeePassXC dans la barre des tâches Windows 11 (icône verte avec une clé)_
+
+**Méthodes de lancement :**
+
+- Cliquez sur l'icône KeePassXC dans la barre des tâches
+- Menu Démarrer → Recherchez "KeePassXC"
+- Raccourci sur le bureau (si créé lors de l'installation)
+
+---
+
+### Étape 2 : Ouvrir une base de données existante
+
+Dans la fenêtre principale de KeePassXC, cliquez sur le menu **"Base de données"** puis sélectionnez **"Ouvrir une base de données..."**
+
+![W2](Ressources/W2.png)
+
+
+
+
+_Figure 2 : Menu "Base de données" avec l'option "Ouvrir une base de données" (Ctrl+O)_
+
+**Méthodes alternatives :**
+
+- Raccourci clavier : `Ctrl + O`
+- Menu : **Base de données → Ouvrir une base de données...**
+- Lien direct : **"Je dispose d'un fichier clé"** (si affiché dans la fenêtre d'accueil)
+
+---
+
+### Étape 3 : Sélectionner votre base de données
+
+L'explorateur de fichiers Windows s'ouvre. Naviguez jusqu'à l'emplacement de votre fichier de base de données (extension `.kdbx`).
+
+![W3](Ressources/W3.png)
+
+
+
+_Figure 3 : Explorateur Windows avec le fichier DSI_T0.kdbx à sélectionner_
+
+**Navigation dans l'explorateur :**
+
+1. Utilisez l'arborescence de gauche pour naviguer vers votre dossier (exemple : `Réseau > srvwin01 > dsi_t0`)
+2. Sélectionnez le fichier `.kdbx` dans la zone centrale
+    - Dans l'exemple : `DSI_T0` (Type : KeePass Password...)
+    - Modifié le : 13/11/2025 19:35
+3. Vérifiez que le filtre affiche **"Base de données KeePass 2 (*.kdbx)"**
+4. Cliquez sur le bouton **"Ouvrir"**
+
+> **💡 Astuce** : Vous pouvez épingler votre dossier de bases de données dans "Accès rapide" pour un accès facilité.
+
+---
+
+### Étape 4 : Sélectionner le fichier clé (double authentification)
+
+Si votre base de données utilise la double authentification, une nouvelle fenêtre s'ouvre pour sélectionner votre fichier clé.
+
+![W5](Ressources/W5.png)
+
+
+
+_Figure 4 : Explorateur Windows avec le fichier clé DSI_T0.keyx_
+
+**À cette étape :**
+
+1. Naviguez vers le dossier contenant votre fichier clé (souvent le même que la base)
+2. Sélectionnez le fichier avec l'extension `.key` ou `.keyx`
+    - Dans l'exemple : `DSI_T0.keyx` (Type : Fichier KEYX)
+    - Modifié le : 13/11/2025 19:34
+3. Vérifiez que le filtre affiche **"Tous les fichiers"** ou le type approprié
+4. Cliquez sur **"Ouvrir"**
+
+> **⚠️ Important** : Le fichier clé doit être EXACTEMENT celui utilisé lors de la création de la base. Une différence d'un seul octet rendra la base inaccessible.
+
+---
+
+### Étape 5 : Authentification (saisie du mot de passe)
+
+Après avoir sélectionné le fichier clé, vous devez entrer votre mot de passe principal pour déverrouiller la base de données.
+
+![W4](Ressources/W4.png)
+
+
+
+_Figure 5 : Fenêtre de déverrouillage avec double authentification_
+
+**Procédure d'authentification complète :**
+
+**① Sélectionner le fichier clé** (partie inférieure)
+
+- Le champ **"Sélectionner le fichier clé :"** affiche le chemin du fichier (masqué pour la sécurité)
+- Si nécessaire, cliquez sur **"Parcourir..."** pour changer le fichier clé
+
+**② Saisir le mot de passe** (partie supérieure)
+
+- Entrez votre mot de passe principal dans le champ **"Saisissez le mot de passe :"**
+- Le mot de passe est masqué par des points noirs pour la sécurité
+- Cliquez sur l'icône 👁️ pour afficher temporairement le mot de passe (si nécessaire)
+
+**③ Déverrouiller** (bouton en bas à droite)
+
+- Cliquez sur le bouton vert **"Déverrouiller"** pour ouvrir votre base
+- Ou appuyez sur `Entrée` après avoir saisi le mot de passe
+
+**Ordre des étapes :** L'ordre recommandé est : ① Fichier clé → ② Mot de passe → ③ Déverrouiller
+
+> **🔒 Sécurité renforcée** : La combinaison mot de passe + fichier clé offre une protection maximale. Sans ces DEUX éléments, vos données restent inaccessibles, même en cas de vol de votre ordinateur.
+
+---
+
+### Étape 6 : Accès à votre base de données
+
+Une fois l'authentification réussie, vous accédez à l'interface principale de KeePassXC avec toutes vos entrées sécurisées.
+
+![W6](Ressources/W6.png)
+
+
+
+_Figure 6 : Interface principale avec la base de données DSI_T0 déverrouillée_
+
+
+---
+
+
+# Guide d'utilisation de KeePassXC sous Ubuntu
+
+## Prérequis
+
+Ce guide suppose que KeePassXC est déjà installé et configuré sur votre système Ubuntu.
+
+---
+
+## Ouverture de votre base de données
+
+### Étape 1 : Lancer l'application
+
+Démarrez KeePassXC depuis votre menu d'applications Ubuntu ou via la ligne de commande :
+
+```bash
+keepassxc
+```
+
+![U1](Ressources/U1.png)
+
+
+
+
+_Figure 1 : Icône KeePassXC dans le dock Ubuntu (icône verte avec une clé)_
+
+---
+
+### Étape 2 : Ouvrir une base de données existante
+
+Dans la fenêtre principale de KeePassXC, cliquez sur le menu **"Base de données"** puis sélectionnez **"Ouvrir une base de données..."**
+
+![U2](Ressources/U2.png)
+
+
+
+
+_Figure 2 : Menu "Base de données" avec l'option "Ouvrir une base de données" (Ctrl+O)_
+
+**Méthodes alternatives :**
+
+- Raccourci clavier : `Ctrl + O`
+- Menu : **Base de données → Ouvrir une base de données...**
+
+---
+
+### Étape 3 : Sélectionner votre base de données
+
+Dans la boîte de dialogue qui s'ouvre, naviguez dans vos dossiers pour localiser votre fichier de base de données (extension `.kdbx`).
+
+![U3](Ressources/U3.png)
+
+
+
+
+_Figure 3 : Fenêtre de sélection avec le fichier DSI_T0.kdbx à choisir_
+
+**Points importants :**
+
+- Les bases de données KeePassXC ont l'extension `.kdbx`
+- Dans l'exemple : le fichier `DSI_T0.kdbx` (2,2 Ko) est identifié comme "KeePass 2 database"
+- Sélectionnez votre fichier puis cliquez sur **"Choisir"** ou **"Ouvrir"**
+
+---
+
+### Étape 4 : Sélectionner le fichier clé (double authentification)
+
+Si votre base de données utilise la double authentification, vous devrez d'abord sélectionner votre fichier clé.
+
+![U5](Ressources/U5.png)
+
+
+
+
+_Figure 4 : Fenêtre de sélection du fichier clé (DSI_T0.keyx dans cet exemple)_
+
+**À cette étape :**
+
+- Vous voyez le fichier `.keyx` ou `.key` dans votre dossier
+- Dans l'exemple : `DSI_T0.keyx` (240 octets)
+- Sélectionnez votre fichier clé puis cliquez sur **"Choisir"**
+
+---
+
+### Étape 5 : Authentification (saisie du mot de passe)
+
+Après avoir sélectionné le fichier clé, vous devez entrer votre mot de passe principal pour déverrouiller la base de données.
+
+![U4](Ressources/U4.png)
+
+
+
+
+_Figure 5 : Fenêtre de déverrouillage avec les trois éléments requis_
+
+**Procédure d'authentification :**
+
+1. **① Sélectionner le fichier clé** : Cliquez sur le bouton **"Parcourir..."** pour choisir votre fichier `.key` ou `.keyx`
+    
+    - Le chemin du fichier clé apparaît dans le champ (masqué par des points pour la sécurité)
+2. **② Saisir le mot de passe** : Entrez votre mot de passe principal dans le champ **"Saisissez le mot de passe :"**
+    
+    - Le mot de passe est masqué pour la sécurité
+    - Attention aux majuscules/minuscules
+3. **③ Déverrouiller** : Cliquez sur le bouton vert **"Déverrouiller"** pour ouvrir votre base
+    
+
+> **⚠️ Note de sécurité** : La double authentification (mot de passe + fichier clé) renforce considérablement la sécurité de votre base de données. Sans ces DEUX éléments, impossible d'accéder à vos données. Conservez votre fichier clé dans un emplacement sécurisé et distinct de votre base de données.
+
+---
+
+### Étape 6 : Accès à votre base de données
+
+Une fois authentifié avec succès, vous accédez à l'interface principale de KeePassXC avec toutes vos entrées.
+
+![U6](Ressources/U6.png)
+
+
+
+
+_Figure 6 : Interface principale avec la base de données déverrouillée_
+
+
+
+
+
 # 3. FAQ
 <span id="faq"></span>
 Cette FAQ répond aux questions courantes sur l'utilisation de KeePass sur Windows 11 et Linux Ubuntu. On se concentre sur l'essentiel pour une prise en main facile.
