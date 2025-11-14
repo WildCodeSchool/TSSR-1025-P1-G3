@@ -454,7 +454,7 @@ Après avoir ouvert la base de données avec Keepassxc, tu peux ajouter, créer 
    - Cliquer sur **Parcourir** dans la section fichier clé 
 ![](Ressources/key_win_win.png)
 
-## 6. Déverrouille
+## 6. Déverrouille la Db
    - Entrer le mot de passe de la base de données
    - Cliquer sur **Déverrouiller**
 
