@@ -6,7 +6,9 @@
 4. [FAQ](#faq)
 
 # 1. Prérequis techniques
+
 <span id="prerequis-techniques"></span>
+
 **Étapes 1 :**
 
   - Crée quatre machines virtuelles :
@@ -32,13 +34,12 @@
 | WIN01    | Windows 10/11                | NAT            | intnet                          | 172.16.10.10 |
 
 # 2. Installation sur les serveurs
+
 <span id="installation-sur-le-serveur"></span>
 
 ## Installation sur le serveur Debian 12/13 (CLI)
 
 ## 1. Mise à jour du système avant l’installation de KeePass :
-
-- *Entre cette commande :*
 
 wilder@srvlx01:~$ sudo apt update && sudo apt upgrade -y
 
@@ -46,33 +47,23 @@ wilder@srvlx01:~$ sudo apt update && sudo apt upgrade -y
 
 ## 2. Installation de KeePassXC et vérification de la version
 
-- *Entre cette commande :*
-
  wilder@srvlx01:~$ sudo apt install -y keepassxc && keepassxc-cli --version
 
 ![](Ressources/Installer_keepassx_verification_versioncCLI.png)
 
 ## 3. Création de l'utilisateur système "keepass_wilder"
 
-- *Entre cette commande :*
-
 wilder@srvlx01:~$ sudo useradd -r -s /usr/sbin/nologin keepass_wilder
 
 ## 4. Création du dossier keepass dans /var
-
-- *Entre cette commande :*
 
 wilder@srvlx01:~$ sudo mkdir -p /var/keepass/files
 
 ## 5. Donne tous les droits a keepass_wilder pour être propriétaire
 
-- *Entre cette commande :* 
-
 wilder@srvlx01:~$ sudo chown keepass_wilder:keepass_wilder /var/keepass/files
 
-## 6.Donne les droits de lecture, écriture et d'exécution a keepass_wilder
-
-- *Entre cette commande :*
+## 6.Donne les droits de lecture, écriture et d'exécution  à keepass_wilder
 
 wilder@srvlx01:~$ sudo chmod 700 /var/keepass/files
 
@@ -80,27 +71,19 @@ wilder@srvlx01:~$ sudo chmod 700 /var/keepass/files
 
 ## 7. Génération de la clé de chiffrement
 
-- *Entre cette commande :*
-
 wilder@srvlx01:~$ sudo -u keepass_wilder bash -c 'dd if=/dev/urandom of=/var/keepass/files/dsi_t1.key bs=64 count=1 status=none'
 
 ## 8.Donne les droits pour que seule keepass_wilder puisse lire la clé 
-
-- *Entre cette commande :*
 
 wilder@srvlx01:~$ sudo chmod 600 /var/keepass/files/dsi_t1.key
 
 ## 9.Donne tous les droits a keepass_wilder pour être propriétaire
 
-- *Entre cette commande :*
-
 wilder@srvlx01:~$ sudo chown keepass_wilder:keepass_wilder /var/keepass/files/dsi_t1.key
 
 ![](Ressources/génère_clé-de_chiffrement.png)
 
-## 10.Créer la base KeePass et définit le mot de passe pour Keepass_wilder
-
-- *Entre cette commande :*
+## 10.Crée la base KeePass et définit le mot de passe pour Keepass_wilder
 
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-create /var/keepass/files/dsi_t1.kdbx --set-key-file /var/keepass/files/dsi_t1.key --set-password
 
@@ -108,16 +91,11 @@ wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-create /var/keepass/fi
 
 ## 11. Vérification des informations de la base de données
 
-- *Entre cette commande :*
-
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli db-info -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx
 
 La base de données est crée et sécurisée. On peut maintenant créer des comptes et y stocker des informations. Plusieurs solutions s’offrent à nous : soit créer les utilisateurs manuellement, soit utiliser un script pour automatiser cette tâche.
 
-
 ## 12. Création d'un utilisateur manuellement
-
-- *Entre cette commande :*
 
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli add -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx "wilder6" --username "nathan"
 
@@ -125,15 +103,11 @@ wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli add -k /var/keepass/files
 
 ## 13. Pour ajouter des informations à l'utilisateur par exemple mail ou téléphone
 
-- *Entre cette commande :*
-
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli edit -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx "wilder6" --notes "mail:nathan@proton.com\nTél: 06-47-13-48-19"
 
 ![](Ressources/ajout_informations_user.png)
 
 ## 14. Pour vérifier les entrées dans la base de données
-
-- *Entre cette commande :*
 
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli ls -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx
 
@@ -141,32 +115,23 @@ wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli ls -k /var/keepass/files/
 
 ## 15. Pour afficher un utilisateur spécifique
 
-- *Entre cette commande :*
-
 wilder@srvlx01:~$ sudo -u keepass_wilder keepassxc-cli show -k /var/keepass/files/dsi_t1.key /var/keepass/files/dsi_t1.kdbx wilder6
 
 ![](Ressources/lister_user_wilder6.png)
 
 ## 16. Attribution des droits d'accès au client wilder 
 
-- *Entre cette commande :*
-
 wilder@srvlx01:~$ sudo chown -R keepass_wilder:wilder /var/keepass/files
 
-## 17.Donne des droits de lecture/écriture/exécution au groupe
-
-- *Entrez cette commande :*
+## 17.Donne des droits de lecture/écriture/exécution au groupe  
 
 wilder@srvlx01:~$ sudo chmod -R 770 /var/keepass/files
 
 ## 18. Pour vérifier les droits
 
-- *Entrez cette commande :*
-
 wilder@srvlx01:~$ sudo ls -l /var/keepass/files
 
 ![](Ressources/verif_droit_distant.png)
-
 
 ## Installation sur le serveur Windown SRVWIN01
 
@@ -174,6 +139,7 @@ wilder@srvlx01:~$ sudo ls -l /var/keepass/files
 
 1. Télécharge et installe Keepassxc sur windows server
 https://keepassxc.org/download
+
 2. Lancez l'application Keepassxc
 
 ## Étap 2 : Création de la base de données
@@ -232,8 +198,6 @@ https://keepassxc.org/download
 
 ## 1. Mise à jour du système et installation de sshfs et keepassxc
 
-- *Entre cette commande :*
-
 wilder@ubu01:~$ sudo apt update && sudo apt install -y sshfs keepassxc
 
 ![](Ressources/installation_sshfs_MAJ_paquets.png)
@@ -242,21 +206,15 @@ wilder@ubu01:~$ sudo apt update && sudo apt install -y sshfs keepassxc
 
 Crée le dossier local où sera montée la base de données distante.
 
-- *Entre cette commande :*
-
 wilder@ubu01:~$ mkdir -p ~/keepass_srvlx01
 
 ![](Ressources/création_dossier.png)
 
 ## 3. Montage du dossier distant SSHFS
 
-- *Entre cette commande :*
-
 wilder@ubu01:~$ sshfs wilder@172.16.10.6:/var/keepass/files ~/keepass_srvlx01
 
 ## 4. Vérification du montage et des droits
-
-- *Entre cette commande :*
 
 wilder@ubu01:~$ ls -l ~/keepass_srvlx01
 
@@ -268,20 +226,15 @@ wilder@ubu01:~$ ls -l ~/keepass_srvlx01
 
 Affiche les entrées,il demandera le mot de passe principal **keepass_wilder**.
 
-- *Entre cette commande :*
-
 wilder@ubu01:~$ keepassxc-cli ls -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srvlx01/dsi_t1.kdbx
 
 ![](Ressources/liste_entrée_srvlx.png)
 
 ## 6. Liste une entrée specifique par exemple wilder1
 
-- *Entre cette commande :*
-
 wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srvlx01/dsi_t1.kdbx wilder1 
 
 ![](Ressources/lister_entrée_wilder1.png)
-
 
 # Configuration du client UBU01 pour acceder a la db SRVWIN01
 
@@ -327,13 +280,13 @@ Clique sur **Ouvrir une base de données existante**
 
 ![](Ressources/selectionne_db.png)
 
-## 8. Parcourir et sélectionne le fichier de clé
+## 8. Parcour et sélectionne le fichier de clé
 
 - Clique sur **Parcourir**
 
 ![](Ressources/parcourir.png)
 
-- Sélectionner le fichier de clé (key file)
+- Sélectionne le fichier de clé (key file)
 
 ![](Ressources/key.png)
 
@@ -353,9 +306,9 @@ Puis l'interface s'ouvre
 
 **Télécharge et installe les outils suivants  avec les paramètres par défaut** 
 
-- WINSCP :  https://winscp.net/eng/download.php
+- WINSCP : https://winscp.net/eng/download.php
 
-- KEEPASSXC : (https://keepassxc.org/download/#windows)
+- KEEPASSXC : https://keepassxc.org/download/#windows
 
 #### **Étape 1 : Connexion au serveur SRVLX01 via winSCP**
 
@@ -365,7 +318,7 @@ Puis l'interface s'ouvre
     - Nom d’utilisateur : nom_utilisateur_linux(wilder)
     - Mot de passe : Saisie le mot de passe associé à l’utilisateur.
     - Protocole : Choisit SFTP port 22 par défaut
-  
+
 3. Clique sur **Connexion** pour te connecter au serveur
 
 ![](Ressources/detail_DB.png)
@@ -385,9 +338,9 @@ Puis l'interface s'ouvre
 
 ![](Ressources/detail_keepass_db.png)
 
-#### **Étape 3 : Copier et coller les  fichiers sur ton PC local**
+#### **Étape 3 : Copie et colle les  fichiers sur ton PC local**
 
-1. Fais glisser **dsi_t1.kdbx** et **dsi_t1.key**  vers le panneau de gauche ton PC local,   C:\Users\wilder\Desktop
+1. Fais glisser **dsi_t1.kdbx** et **dsi_t1.key**  vers le panneau de gauche ton PC local, C:\Users\wilder\Desktop
 2. Vérifie que les fichiers sont bien présents dans le dossier de destination.
 
 ![](Ressources/copie-coller.png)
@@ -409,10 +362,10 @@ Puis l'interface s'ouvre
 4. Pour sélectionner le fichier clé :
     - Clique sur **Parcourir** à côté de Sélectionner le fichier clé.
     - Choisis le fichier **dsi_t1.key** que tu as téléchargé.
-
+  
 ![](Ressources/cle_chiffrement.png)
 
-5. Une fenêtre te demande de saisir le mot de passe de la base de données.
+1. Une fenêtre te demande de saisir le mot de passe de la base de données.
 
 ![](Ressources/MDP_cle.png)
 
@@ -428,7 +381,7 @@ Après avoir ouvert la base de données avec Keepassxc, tu peux ajouter, créer 
 
    - https://keepassxc.org/download
 
-## 2. Monter le partage réseau
+## 2. Monte le partage réseau
 
    - Ouvre l'Explorateur Windows
    - Tape dans la barre d'adresse : \\172.16.10.5\Keepass_db_srwin01
@@ -436,15 +389,15 @@ Après avoir ouvert la base de données avec Keepassxc, tu peux ajouter, créer 
 ![](Ressources/srvwin_win.png)
 
    - Entre les identifiants : utilisateur **wilder** et son mot de passe
-  
- ![](Ressources/info-db-srwwin-win.png) 
+
+![](Ressources/info-db-srwwin-win.png) 
 
 ## 3. Lance KeePassXC
 
 ## 4. Ouvre la base de données
    - Clique sur **Ouvrir une base de données existante**
  
-  ![](Ressources/keepass_interface.png)
+![](Ressources/keepass_interface.png)
 
    - Choisie le fichier : dsi_to
 
@@ -459,10 +412,6 @@ Après avoir ouvert la base de données avec Keepassxc, tu peux ajouter, créer 
    - Clique sur **Déverrouiller**
 
 ![](Ressources/ineterface_db_win.png)
-
-
-
-
 
 # 4. FAQ
 <span id="faq"></span>
