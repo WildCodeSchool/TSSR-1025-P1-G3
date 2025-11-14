@@ -170,7 +170,7 @@ wilder@srvlx01:~$ sudo ls -l /var/keepass/files
 
 ## Installation sur le serveur Windown SRVWIN01
 
-## Étape 1 : Installation de KeePassXC sur WIN01
+## Étape 1 : Installation de KeePassXC sur SRVWIN01
 
 1. Télécharge et installe Keepassxc sur windows server
 https://keepassxc.org/download
