@@ -228,7 +228,7 @@ https://keepassxc.org/download
 
 <span id="installation-sur-le-client"></span>
 
-# Configuration du client UBU01
+# Configuration du client UBU01 et Acceder a la db SRVLX01
 
 ## 1. Mise à jour du système et installation de sshfs et keepassxc
 
@@ -283,8 +283,72 @@ wilder@ubu01:~$ keepassxc-cli show -k ~/keepass_srvlx01/dsi_t1.key ~/keepass_srv
 ![](Ressources/lister_entrée_wilder1.png)
 
 
+# Configuration du client UBU01 et Acceder a la db SRVWIN01
 
-# Configuration du client WIN01
+## 1. Installer KeePass en mode graphique (GUI)
+
+wilder@ubu01:~$ sudo apt update && sudo apt install keepassxc cifs-utils -y
+
+![](Ressources/Maj_installation.png)
+
+## 2. Crée le dossier local et verification 
+
+wilder@ubu01:~$ mkdir -p ~/keepass_srvwin01
+wilder@ubu01:~$ ls -l keepass_srvwin01/
+
+![](Ressources/creation_dossier_verif.png)
+
+## 3. Monte le partage Windows
+
+wilder@ubu01:~$ sudo mount -t cifs //172.16.10.5/Keepass_db_srwin01 ~/keepass_srvwin01 -o username=wilder
+
+![](Ressources/montage_local.png)
+
+## 4. Vérifie le montage 
+
+wilder@ubu01:~$ ls -l keepass_srvwin01/
+
+![](Ressources/verif_montage.png)
+
+# 5. Lance KeePass
+
+ wilder@ubu01:~$ keepassxc
+
+## 6. Ouvre la base de données
+
+Cliquer sur **Ouvrir une base de données existante**
+
+![](Ressources/ouverture_keepass_srvwin_sur_ubu.png)
+
+## 7. Sélectionne le fichier de base de données
+
+- Choisir le fichier : **dsi_to**
+- 
+![](Ressources/selectionne_db.png)
+
+## 8. Parcourir et sélectionne le fichier de clé
+
+- Cliquer sur **Parcourir**
+- 
+![](Ressources/parcourir.png)
+
+- Sélectionner le fichier de clé (key file)
+- 
+![](Ressources/key.png)
+
+## 9. Déverrouiller la base de données
+
+- Entrer le mot de passe de la base de données
+- 
+![](Ressources/mot_de_passe.png)
+
+- Cliquer sur **Déverrouiller**
+  
+Puis l'interface s'ouvre
+
+![](Ressources/interface.png)
+
+# Configuration du client WIN01 et acceder a la Db SRVLX01
 
 **Télécharge et installe les outils suivants  avec les paramètres par défaut** 
 
