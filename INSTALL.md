@@ -436,29 +436,28 @@ Après avoir ouvert la base de données avec Keepassxc, tu peux ajouter, créer 
 ![](Ressources/srvwin_win.png)
 
    - Entre les identifiants : utilisateur **wilder** et son mot de passe
-   - 
+  
  ![](Ressources/info-db-srwwin-win.png) 
 
 ## 3. Lance KeePassXC
 
 ## 4. Ouvre la base de données
    - Clique sur **Ouvrir une base de données existante**
-   - 
+ 
   ![](Ressources/keepass_interface.png)
 
    - Choisir le fichier : dsi_to
-  
+
 ![](Ressources/db_srv_win_win.png)
 
 ## 5. Ajoute la  clé
-   - Cliquer sur **Parcourir** dans la section fichier clé
-   - 
+   - Cliquer sur **Parcourir** dans la section fichier clé 
 ![](Ressources/key_win_win.png)
 
 ## 6. Déverrouille
    - Entrer le mot de passe de la base de données
    - Cliquer sur **Déverrouiller**
-   - 
+
 ![](Ressources/ineterface_db_win.png)
 
 
