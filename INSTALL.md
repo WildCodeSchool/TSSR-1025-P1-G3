@@ -415,36 +415,41 @@ Après avoir ouvert la base de données avec Keepassxc, tu peux ajouter, créer 
 
 # 4. FAQ
 <span id="faq"></span>
-Cette FAQ aborde les problèmes potentiels et questions techniques courantes lors de la mise en place de KeePass sur différents systèmes. Elle se concentre sur les dépannages pour une installation réussie.
 
-## Sur Windows Server
+## Windows Server 2022
 
-**Q1 : Que faire si l'installation échoue à cause de .NET Framework ?**  
-Vérifiez que .NET Framework 4.8 est installé via le Gestionnaire de serveur. Téléchargez-le depuis le site Microsoft si nécessaire et relancez l'installation.
+### L'installation échoue avec une erreur de permissions
+**Solution :** Exécutez l'installeur avec des privilèges administrateur (clic droit > "Exécuter en tant qu'administrateur"). Vérifiez également que les stratégies de groupe n'empêchent pas l'installation de logiciels tiers.
 
-**Q2 : KeePass est-il compatible avec les rôles serveur comme Active Directory ?**  
-Oui, mais exécutez-le via une session Remote Desktop pour éviter les conflits avec les services serveur. Testez en mode compatibilité si des erreurs surgissent.
+### KeePassXC ne démarre pas après l'installation
+**Solution :** Installez les redistributables Visual C++ 2019 ou version supérieure. Téléchargez-les depuis le site Microsoft et redémarrez le serveur après installation.
 
-## Sur Linux Debian
+---
 
-**Q1 : Que faire en cas d'erreur liée à Mono lors du lancement ?**  
-Mettez à jour Mono avec sudo apt update && sudo apt upgrade mono-complete . Vérifiez les logs dans le terminal pour des détails spécifiques.
+## Debian
 
-**Q2 : Problèmes de permissions pour les bases de données KeePass ?**  
-Assurez-vous que l'utilisateur a les droits en lecture/écriture sur le dossier des fichiers .kdbx. Évitez de lancer en root pour des raisons de sécurité.
+### Erreur "Package not found" lors de l'installation via apt
+**Solution :** Mettez à jour la liste des paquets avec `sudo apt update`, puis installez avec `sudo apt install keepassxc`. Si le paquet n'est pas disponible, ajoutez le dépôt backports ou téléchargez le fichier .deb depuis le site officiel.
 
-## Sur Windows 11 (VM Client)
+### L'interface graphique ne s'affiche pas
+**Solution :** Vérifiez qu'un environnement de bureau est installé (GNOME, KDE, etc.). Installez les dépendances Qt5 manquantes avec `sudo apt install libqt5gui5 libqt5widgets5`. Connectez-vous via une session graphique, pas en SSH standard.
 
-**Q1 : Pourquoi KeePass est-il lent dans une VM Windows 11 ?**  
-Allouez plus de RAM et CPU à la VM via les paramètres de l'hyperviseur. Désactivez les effets graphiques inutiles dans Windows pour améliorer les performances.
+---
 
-**Q2 : Erreurs de synchronisation avec des plugins comme KeeAnywhere ?**  
-Vérifiez la connexion réseau de la VM et mettez à jour les plugins. Testez sans plugins pour isoler le problème, souvent lié à des certificats SSL.
+## Windows 11
 
-## Sur Linux Ubuntu (VM Client)
+### Windows Defender bloque l'installation
+**Solution :** Ajoutez une exception temporaire dans Windows Defender pendant l'installation. Téléchargez KeePassXC uniquement depuis le site officiel (keepassxc.org) pour éviter les faux positifs. L'installeur signé devrait être reconnu automatiquement.
 
-**Q1 : Que faire si KeePass ne s'ouvre pas après installation dans une VM Ubuntu ?**  
-Installez les dépendances manquantes comme mono-complete et xdotool via apt. Relancez et vérifiez les erreurs dans le terminal.
+### KeePassXC n'apparaît pas dans le menu Démarrer après installation
+**Solution :** Recherchez "KeePassXC" dans la barre de recherche Windows. Si absent, vérifiez dans `C:\Program Files\KeePassXC\` et créez manuellement un raccourci. Redémarrez l'explorateur Windows via le Gestionnaire des tâches si nécessaire.
 
-**Q2 : Problèmes d'intégration avec le clipboard dans une VM ?**  
-Installez les outils invités de votre hyperviseur (ex. : VirtualBox Guest Additions) pour une meilleure gestion du presse-papiers partagé.
+---
+
+## Ubuntu
+
+### Erreur de dépendances lors de l'installation du fichier .deb
+**Solution :** Utilisez `sudo apt install -f` pour corriger les dépendances manquantes. Privilégiez l'installation via snap (`sudo snap install keepassxc`) ou le dépôt officiel Ubuntu pour éviter les problèmes de compatibilité.
+
+### Le plugin navigateur ne se connecte pas à KeePassXC
+**Solution :** Activez l'intégration navigateur dans KeePassXC (Outils > Paramètres > Intégration navigateur). Vérifiez que le socket de communication existe dans `~/.local/share/keepassxc/`. Relancez le navigateur après activation de l'extension.
