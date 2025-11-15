@@ -2,7 +2,9 @@
 
 1. [Utilisation de base](#utilisation-de-base)
 2. [Utilisation avancée](#utilisation-avancee)
-3. [FAQ](#faq)
+3. [Ouverture base de données sous windows 11](#Ouverturebdd-win11)
+4. [Ouverture base de données sous ubuntu](#Ouverturebdd-ubuntu)
+5. [FAQ](#faq)
 
 # 🔑 Guide Utilisateur de Base KeePass
 <span id="utilisation-de-base"></span>
@@ -111,7 +113,7 @@ données.
 ---
 
 # Guide d'utilisation de KeePassXC sous Windows 11
-
+<span id="Ouverturebdd-win11"></span>
 ## Prérequis
 
 Ce guide suppose que KeePassXC est déjà installé et configuré sur votre système Windows 11.
@@ -253,7 +255,7 @@ _Figure 6 : Interface principale avec la base de données DSI_T0 déverrouillée
 
 
 # Guide d'utilisation de KeePassXC sous Ubuntu
-
+<span id="Ouverturebdd-ubuntu"></span>
 ## Prérequis
 
 Ce guide suppose que KeePassXC est déjà installé et configuré sur votre système Ubuntu.
