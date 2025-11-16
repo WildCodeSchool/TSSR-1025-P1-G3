@@ -464,10 +464,10 @@ et télécharge keepasxc:
 ## Debian
 
 ### Erreur "Package not found" lors de l'installation via apt
-**Solution :** Mettez à jour la liste des paquets avec `sudo apt update`, puis installez avec `sudo apt install keepassxc`. Si le paquet n'est pas disponible, ajoutez le dépôt backports ou téléchargez le fichier .deb depuis le site officiel.
+**Solution :** Mettez à jour la liste des paquets avec **sudo apt update**, puis installez avec **sudo apt install keepassxc**. Si le paquet n'est pas disponible, ajoutez le dépôt backports ou téléchargez le fichier .deb depuis le site officiel.
 
 ### L'interface graphique ne s'affiche pas
-**Solution :** Vérifiez qu'un environnement de bureau est installé (GNOME, KDE, etc.). Installez les dépendances Qt5 manquantes avec `sudo apt install libqt5gui5 libqt5widgets5`. Connectez-vous via une session graphique, pas en SSH standard.
+**Solution :** Vérifiez qu'un environnement de bureau est installé (GNOME, KDE, etc.). Installez les dépendances Qt5 manquantes avec **sudo apt install libqt5gui5 libqt5widgets5**. Connectez-vous via une session graphique, pas en SSH standard.
 
 ---
 
@@ -477,14 +477,14 @@ et télécharge keepasxc:
 **Solution :** Ajoutez une exception temporaire dans Windows Defender pendant l'installation. Téléchargez KeePassXC uniquement depuis le site officiel (keepassxc.org) pour éviter les faux positifs. L'installeur signé devrait être reconnu automatiquement.
 
 ### KeePassXC n'apparaît pas dans le menu Démarrer après installation
-**Solution :** Recherchez "KeePassXC" dans la barre de recherche Windows. Si absent, vérifiez dans `C:\Program Files\KeePassXC\` et créez manuellement un raccourci. Redémarrez l'explorateur Windows via le Gestionnaire des tâches si nécessaire.
+**Solution :** Recherchez "KeePassXC" dans la barre de recherche Windows. Si absent, vérifiez dans **C:\Program Files\KeePassXC** et créez manuellement un raccourci. Redémarrez l'explorateur Windows via le Gestionnaire des tâches si nécessaire.
 
 ---
 
 ## Ubuntu
 
 ### Erreur de dépendances lors de l'installation du fichier .deb
-**Solution :** Utilisez `sudo apt install -f` pour corriger les dépendances manquantes. Privilégiez l'installation via snap (`sudo snap install keepassxc`) ou le dépôt officiel Ubuntu pour éviter les problèmes de compatibilité.
+**Solution :** Utilisez **sudo apt install -f** pour corriger les dépendances manquantes. Privilégiez l'installation via snap **sudo snap install keepassxc**ou le dépôt officiel Ubuntu pour éviter les problèmes de compatibilité.
 
 ### Le plugin navigateur ne se connecte pas à KeePassXC
-**Solution :** Activez l'intégration navigateur dans KeePassXC (Outils > Paramètres > Intégration navigateur). Vérifiez que le socket de communication existe dans `~/.local/share/keepassxc/`. Relancez le navigateur après activation de l'extension.
+**Solution :** Activez l'intégration navigateur dans KeePassXC (Outils > Paramètres > Intégration navigateur). Vérifiez que le socket de communication existe dans **~/.local/share/keepassxc**. Relancez le navigateur après activation de l'extension.
