@@ -322,18 +322,17 @@ Puis l'interface s'ouvre
 - WINSCP : https://winscp.net/eng/download.php
 
 - KEEPASSXC : https://keepassxc.org/download/#windows
-- 
- Dépendance obligatoire : KeePassXC nécessite Microsoft Visual C++ Redistributables 2015-2022 pour fonctionner sur Windows.
 
-Vérification et installation :
+ Dépendance obligatoire : KeePassXC nécessite Microsoft Visual C++ Redistributables 2015-2022 pour fonctionner sur Windows.
 
 Si KeePassXC refuse de démarrer avec l'erreur "VCRUNTIME140.dll"
 
 ![](Ressources/win_dll.png)
 
-Télécharge et Installe les redistributables : https://aka.ms/vs/17/release/vc_redist.x64.exe
+Télécharge et Installe les redistributables: 
 
- 
+https://aka.ms/vs/17/release/vc_redist.x64.exe
+
 #### **Étape 1 : Connexion au serveur SRVLX01 via winSCP**
 
 1. Lance winSCP depuis le menu Démarrer
@@ -386,7 +385,7 @@ Télécharge et Installe les redistributables : https://aka.ms/vs/17/release/vc_
 4. Pour sélectionner le fichier clé :
     - Clique sur **Parcourir** à côté de Sélectionner le fichier clé.
     - Choisis le fichier **dsi_t1.key** que tu as téléchargé.
-  
+
 ![](Ressources/cle_chiffrement.png)
 
 1. Une fenêtre te demande de saisir le mot de passe de la base de données.
@@ -405,18 +404,17 @@ Après avoir ouvert la base de données avec Keepassxc, tu peux ajouter, créer 
 
 Dépendance obligatoire : KeePassXC nécessite  Microsoft Visual C++ Redistributables 2015-2022 pour fonctionner sur Windows.
 
-Vérification et installation :
+Si KeePassXC refuse de démarrer avec l'erreur "VCRUNTIME140.dll "
 
-    Si KeePassXC refuse de démarrer avec l'erreur "VCRUNTIME140.dll "
+![](Ressources/win_dll.png)
 
-    ![](Ressources/win_dll.png)
+Télécharge et Installe les redistributables:
 
-    Télécharge et Installe les redistributables : https://aka.ms/vs/17/release/vc_redist.x64.exe
+https://aka.ms/vs/17/release/vc_redist.x64.exe
 
- Puis télécharge keepasxc:
+et télécharge keepasxc:
 
    - https://keepassxc.org/download
-
 
 ## 2. Monte le partage réseau
 
