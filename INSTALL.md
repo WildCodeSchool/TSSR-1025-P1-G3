@@ -141,14 +141,13 @@ wilder@srvlx01:~$ sudo ls -l /var/keepass/files
 
 Vérification et installation :
 
-    Si KeePassXC refuse de démarrer avec l'erreur "MSVCP140.dll "
+Si KeePassXC refuse de démarrer avec l'erreur "MSVCP140.dll"
 
 ![](Ressources/winserveur_ddl.png)
 
 Télécharge et Installe les redistributables : https://aka.ms/vs/17/release/vc_redist.x64.exe
 
 1. Télécharge et installe Keepassxc sur windows server
-
 
 https://keepassxc.org/download
 
@@ -326,12 +325,12 @@ Puis l'interface s'ouvre
 
 Vérification et installation :
 
-    Si KeePassXC refuse de démarrer avec l'erreur "VCRUNTIME140.dll "
+Si KeePassXC refuse de démarrer avec l'erreur "VCRUNTIME140.dll"
 
-    ![](Ressources/win_dll.png)
+![](Ressources/win_dll.png)
 
-    Télécharge et Installe les redistributables : https://aka.ms/vs/17/release/vc_redist.x64.exe
-     
+Télécharge et Installe les redistributables : https://aka.ms/vs/17/release/vc_redist.x64.exe
+
  
 #### **Étape 1 : Connexion au serveur SRVLX01 via winSCP**
 
