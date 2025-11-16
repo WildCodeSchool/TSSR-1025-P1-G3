@@ -145,13 +145,15 @@ Si KeePassXC refuse de démarrer avec l'erreur "MSVCP140.dll"
 
 ![](Ressources/winserveur_ddl.png)
 
-Télécharge et Installe les redistributables : https://aka.ms/vs/17/release/vc_redist.x64.exe
+1. Télécharge et Installe les redistributables: 
 
-1. Télécharge et installe Keepassxc sur windows server
+https://aka.ms/vs/17/release/vc_redist.x64.exe
+
+2. Télécharge et installe Keepassxc sur windows server
 
 https://keepassxc.org/download
 
-2. Lancez l'application Keepassxc
+3. Lance l'application Keepassxc
 
 ## Étape 2 : Création de la base de données
 
