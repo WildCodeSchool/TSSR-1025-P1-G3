@@ -55,7 +55,7 @@
 
     * Ou **Quittez** complètement le logiciel.
 
-# 🛡️ Guide Utilisateur Avancé KeePass
+#  Guide Utilisateur Avancé KeePass
 <span id="utilisation-avancee"></span>
 
 ## 1. **Intégration au Navigateur**
@@ -179,7 +179,7 @@ _Figure 3 : Explorateur Windows avec le fichier DSI_T0.kdbx à sélectionner_
 3. Vérifiez que le filtre affiche **Base de données KeePass 2 (*.kdbx)**
 4. Cliquez sur le bouton **Ouvrir**
 
-> ** Astuce** : Vous pouvez épingler votre dossier de bases de données dans "Accès rapide" pour un accès facilité.
+
 
 ---
 
@@ -202,7 +202,7 @@ _Figure 4 : Explorateur Windows avec le fichier clé DSI_T0.keyx_
 3. Vérifiez que le filtre affiche **Tous les fichiers** ou le type approprié
 4. Cliquez sur **Ouvrir**
 
-> ** Important** : Le fichier clé doit être EXACTEMENT celui utilisé lors de la création de la base. Une différence d'un seul octet rendra la base inaccessible.
+> **Important** : Le fichier clé doit être EXACTEMENT celui utilisé lors de la création de la base. Une différence d'un seul octet rendra la base inaccessible.
 
 ---
 
@@ -236,7 +236,7 @@ _Figure 5 : Fenêtre de déverrouillage avec double authentification_
 
 **Ordre des étapes :** L'ordre recommandé est : ① Fichier clé → ② Mot de passe → ③ Déverrouiller
 
-> ** Sécurité renforcée** : La combinaison mot de passe + fichier clé offre une protection maximale. Sans ces DEUX éléments, vos données restent inaccessibles, même en cas de vol de votre ordinateur.
+> **Sécurité renforcée** : La combinaison mot de passe + fichier clé offre une protection maximale. Sans ces DEUX éléments, vos données restent inaccessibles, même en cas de vol de votre ordinateur.
 
 ---
 
