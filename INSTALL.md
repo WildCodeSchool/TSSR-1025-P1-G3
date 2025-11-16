@@ -137,12 +137,24 @@ wilder@srvlx01:~$ sudo ls -l /var/keepass/files
 
 ## Étape 1 : Installation de KeePassXC sur SRVWIN01
 
+ Dépendance obligatoire : KeePassXC nécessite Microsoft Visual C++ Redistributables 2015-2022 pour fonctionner sur Windows.
+
+Vérification et installation :
+
+    Si KeePassXC refuse de démarrer avec l'erreur "MSVCP140.dll "
+
+![](Ressources/winserveur_ddl.png)
+
+Télécharge et Installe les redistributables : https://aka.ms/vs/17/release/vc_redist.x64.exe
+
 1. Télécharge et installe Keepassxc sur windows server
+
+
 https://keepassxc.org/download
 
 2. Lancez l'application Keepassxc
 
-## Étap 2 : Création de la base de données
+## Étape 2 : Création de la base de données
 
 1. Clique sur **Create Database** dans l'écran d'accueil
 ![](Ressources/ouverture_keepass.png)
@@ -309,7 +321,18 @@ Puis l'interface s'ouvre
 - WINSCP : https://winscp.net/eng/download.php
 
 - KEEPASSXC : https://keepassxc.org/download/#windows
+- 
+ Dépendance obligatoire : KeePassXC nécessite Microsoft Visual C++ Redistributables 2015-2022 pour fonctionner sur Windows.
 
+Vérification et installation :
+
+    Si KeePassXC refuse de démarrer avec l'erreur "VCRUNTIME140.dll "
+
+    ![](Ressources/win_dll.png)
+
+    Télécharge et Installe les redistributables : https://aka.ms/vs/17/release/vc_redist.x64.exe
+     
+ 
 #### **Étape 1 : Connexion au serveur SRVLX01 via winSCP**
 
 1. Lance winSCP depuis le menu Démarrer
@@ -379,7 +402,20 @@ Après avoir ouvert la base de données avec Keepassxc, tu peux ajouter, créer 
 
 ## 1. Télécharge et installe KeePassXC
 
+Dépendance obligatoire : KeePassXC nécessite  Microsoft Visual C++ Redistributables 2015-2022 pour fonctionner sur Windows.
+
+Vérification et installation :
+
+    Si KeePassXC refuse de démarrer avec l'erreur "VCRUNTIME140.dll "
+
+    ![](Ressources/win_dll.png)
+
+    Télécharge et Installe les redistributables : https://aka.ms/vs/17/release/vc_redist.x64.exe
+
+ Puis télécharge keepasxc:
+
    - https://keepassxc.org/download
+
 
 ## 2. Monte le partage réseau
 

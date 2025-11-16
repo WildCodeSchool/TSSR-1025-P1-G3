@@ -95,10 +95,12 @@ clients :
 
 - Configuration des permissions SSH : Mise en place des droits d'accès appropriés sur le serveur Linux pour permettre l'accès aux fichiers .kdbx tout en maintenant la sécurité
 -  Configuration réseau: Ouverture des ports nécessaires (SSH port 22) et configuration des pare-feu
+-  Dépendances Windows manquantes : Sur les serveurs Windows Server et les clients Windows, KeePassXC ne pouvait pas démarrer sans l'installation préalable des Microsoft Visual C++ Redistributables . Cette dépendance n'étant pas toujours mentionnée clairement dans la documentation officielle, nous avons dû diagnostiquer l'erreur "VCRUNTIME140.dll manquant" sur le client windows et "MSVCP140.dll" sur windows serveur et installer manuellement les packages redistribuables x64 depuis le site Microsoft pour permettre le lancement correct de l'application.
 
 # 💡 Solutions trouvées
 <span id="solutions-trouvees"></span>
 - Documentation d'une procédure de montage SSHFS standardisée pour faciliter l'installation sur les nouveaux postes clients
+- Installation systématique des Microsoft Visual C++ Redistributables 2015-2022 (x64) sur tous les postes Windows avant le déploiement de KeePassXC, avec ajout de cette étape comme prérequis obligatoire dans notre documentation d'installation (INSTALL.md).
 
 # 🚀 Améliorations possibles
 <span id="ameliorations-possibles"></span>
